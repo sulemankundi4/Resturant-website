@@ -38,8 +38,11 @@
             <nav>
               <div class="flex items-center justify-between">
                 <div class="flex flex-1 w-full items-center justify-between">
-                  <a href="index.html" class="w-full md:max-w-[200px] lg:max-w-[215px]">
-                    <img src="./assets/images/logo.png" class="h-8" alt="Logo" />
+                  <a href="index2.html" class="w-full md:max-w-[213px] lg:max-w-[213px]">
+                    <div class="flex items-center">
+                      <span class="font-satisfy text-4xl text-Bright-Orange">Gus</span>
+                      <span class="font-plus-jakarta-sans font-bold text-4xl text-white">to</span>
+                    </div>
                   </a>
                   <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2" aria-controls="navbar-dropdown" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
@@ -50,102 +53,19 @@
                 </div>
                 <div class="hidden w-full md:block md:w-auto absolute md:relative left-0 top-full bg-Deep-Teal md:bg-transparent" id="navbar-dropdown">
                   <ul class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">
-                    <li @click.away="open = false" class="relative" x-data="{ open: false }">
-                      <button type="button" @click="open = !open" class="flex flex-row items-center w-full md:w-auto md:inline-flex">
-                        <span>Home</span>
-                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 ml-1 transition-transform duration-200 transform">
-                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                      </button>
-                      <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-max mt-2 origin-top-right bg-Deep-Teal z-[1]">
-                        <ul aria-labelledby="dropdownLargeButton">
-                          <li>
-                            <a href="index.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Home - 1</a>
-                          </li>
-                          <li>
-                            <a href="index2.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Home - 2</a>
-                          </li>
-                          <li>
-                            <a href="index3.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Home - 3</a>
-                          </li>
-                        </ul>
-                      </div>
+                    <li class="mx-0">
+                      <a href="index2.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">Home</a>
+                    </li>
+                    <li class="mx-0">
+                      <a href="about-us.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">About us</a>
+                    </li>
+                    <li class="mx-0">
+                      <a href="our-menu.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">Our Menu</a>
+                    </li>
+                    <li class="mx-0">
+                      <a href="shop-pages.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">shop</a>
                     </li>
 
-                    <li class="mx-0">
-                      <a href="about-us.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">About Us</a>
-                    </li>
-                    <li @click.away="open = false" class="relative" x-data="{ open: false }">
-                      <button type="button" @click="open = !open" class="flex flex-row items-center w-full md:w-auto md:inline-flex">
-                        Pages
-                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 ml-1 transition-transform duration-200 transform">
-                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                      </button>
-                      <!-- Dropdown menu -->
-                      <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-max mt-2 origin-top-right bg-Deep-Teal z-[1]">
-                        <ul aria-labelledby="dropdownLargeButton">
-                          <li>
-                            <a href="about-us.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">About Us</a>
-                          </li>
-                          <li>
-                            <a href="our-menu.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Our Menu</a>
-                          </li>
-                          <li>
-                            <a href="reservation.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Reservation</a>
-                          </li>
-                          <li>
-                            <a href="meet-the-chef.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Meet The Chef</a>
-                          </li>
-                          <li>
-                            <a href="the-chef-single.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">The Chef Single</a>
-                          </li>
-                          <li>
-                            <a href="shop-pages.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop Pages</a>
-                          </li>
-                          <li>
-                            <a href="shop-details.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop Details</a>
-                          </li>
-                          <li>
-                            <a href="faq.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Faq</a>
-                          </li>
-                          <li>
-                            <a href="blog-grid.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Blog Grid</a>
-                          </li>
-                          <li>
-                            <a href="blog-standard.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Blog Standard</a>
-                          </li>
-                          <li>
-                            <a href="blog-details.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Blog Details</a>
-                          </li>
-                          <li>
-                            <a href="contact-us.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Contact Us</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li @click.away="open = false" class="relative" x-data="{ open: false }">
-                      <button type="button" @click="open = !open" class="flex flex-row items-center w-full md:w-auto md:inline-flex">
-                        Shop
-                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 ml-1 transition-transform duration-200 transform">
-                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                      </button>
-                      <!-- Dropdown menu -->
-                      <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-max mt-2 origin-top-right bg-Deep-Teal z-[1]">
-                        <ul aria-labelledby="dropdownLargeButton">
-                          <li>
-                            <a href="shop-pages.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop Pages</a>
-                          </li>
-                          <li>
-                            <a href="shop-details.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop Details</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="blog-standard.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">Blog</a>
-                    </li>
                     <li>
                       <a href="contact-us.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">Contacts</a>
                     </li>
@@ -159,7 +79,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="reservation.html" class="btn inline-flex items-center justify-center gap-x-[7px] font-jost font-normal leading-[56px] text-[14px] md:text-[16px] text-white bg-Bright-Orange px-[12px] lg:px-[41px] rounded-md">
+                      <a href="contact-us.html" class="btn inline-flex items-center justify-center gap-x-[7px] font-jost font-normal leading-[56px] text-[14px] md:text-[16px] text-white bg-Bright-Orange px-[12px] lg:px-[41px] rounded-md">
                         <span class="btn__ink"></span>
                         <div class="btn__inner">Book Now</div>
                         <span>
@@ -843,11 +763,11 @@
                 UI Design |
                 <span class="text-Bright-Orange">17 Dec 2024</span>
               </p>
-              <h2 class="font-Playfair-Display font-bold text-[20px] lg:text-[30px] leading-[40px] text-white mb-5 lg:mb-[38px]">You’re Still Not Using Digital Tools?</h2>
+              <h2 class="font-Playfair-Display font-bold text-[20px] lg:text-[30px] leading-[40px] text-white mb-5 lg:mb-[38px]">You're Still Not Using Digital Tools?</h2>
               <div class="img w-full h-full mb-[25px] wow overlay-anim zoom-effect overflow-hidden">
                 <img class="w-full h-full" src="./assets/pictures/news-blog-1.png" alt="" />
               </div>
-              <a href="blog-details.html" class="flex items-center justify-between">
+              <a href="" class="flex items-center justify-between">
                 <span class="font-manrope font-semibold text-[18px] leading-[24px] text-white">Read More</span>
                 <span class="w-10 h-10 rounded-full border border-Bright-Orange flex items-center justify-center">
                   <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -867,7 +787,7 @@
               <div class="img w-full h-full mb-[25px] wow overlay-anim zoom-effect overflow-hidden">
                 <img class="w-full h-full" src="./assets/pictures/news-blog-2.png" alt="" />
               </div>
-              <a href="blog-details.html" class="flex items-center justify-between">
+              <a href="" class="flex items-center justify-between">
                 <span class="font-manrope font-semibold text-[18px] leading-[24px] text-white">Read More</span>
                 <span class="w-10 h-10 rounded-full border border-Bright-Orange flex items-center justify-center">
                   <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -887,7 +807,7 @@
               <div class="img w-full h-full mb-[25px] wow overlay-anim zoom-effect overflow-hidden">
                 <img class="w-full h-full" src="./assets/pictures/news-blog-3.png" alt="" />
               </div>
-              <a href="blog-details.html" class="flex items-center justify-between">
+              <a href="" class="flex items-center justify-between">
                 <span class="font-manrope font-semibold text-[18px] leading-[24px] text-white">Read More</span>
                 <span class="w-10 h-10 rounded-full border border-Bright-Orange flex items-center justify-center">
                   <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -936,19 +856,19 @@
             <h4 class="pt-10 md:pt-[100px] font-plus-jakarta-sans font-semibold text-[18px] leading-[22px] text-white mb-[35px]">Resources</h4>
             <ul class="pb-10 md:pb-[110px] flex items-start justify-start flex-col gap-7">
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">Potato</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="">Potato</a>
               </li>
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">Organic Juice</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="">Organic Juice</a>
               </li>
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">Lemon Juice</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="">Lemon Juice</a>
               </li>
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">MuTton Tikka</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="">MuTton Tikka</a>
               </li>
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">Seafoods</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="">Seafoods</a>
               </li>
             </ul>
           </div>
@@ -956,29 +876,29 @@
             <h4 class="pt-10 md:pt-[100px] font-plus-jakarta-sans font-semibold text-[18px] leading-[22px] text-white mb-[35px]">Quick Link</h4>
             <ul class="pb-10 md:pb-[110px] flex items-start justify-start flex-col gap-7">
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="reservation.html">Fast Delivery</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="">Fast Delivery</a>
               </li>
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="shop-details.html">Vegan Cuisine</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="">Vegan Cuisine</a>
               </li>
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="shop-pages.html">Fresh Products</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="">Fresh Products</a>
               </li>
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="meet-the-chef.html">Skilled Chefs</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="">Skilled Chefs</a>
               </li>
               <li>
-                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="shop-details.html">Great Coffee</a>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="">Great Coffee</a>
               </li>
             </ul>
           </div>
           <div class="col-span-12 md:col-span-6 md:border-l border-white/10">
             <div class="md:pl-[80px] xl:pl-[124px] md:pt-[100px] pb-[110px]">
               <h1 class="font-plus-jakarta-sans font-semibold text-white footer-title">
-                We’re Now Available On <br />
+                We're Now Available On <br />
                 Store Download Our Apps
               </h1>
-              <p class="footer-desc font-jost font-normal text-white">No credit card requirement it’s full free for all</p>
+              <p class="footer-desc font-jost font-normal text-white">No credit card requirement it's full free for all</p>
               <ul class="flex items-center justify-start gap-x-2 lg:gap-x-4 xl:gap-x-[25px]">
                 <li>
                   <a class="footer-store flex items-center justify-center gap-[10px] border-[2px] border-white/10 rounded-[6px] font-Work-Sans font-semibold text-white hover:bg-Bright-Orange transition-all ease-linear duration-300 hover:border-Bright-Orange" href="#"
@@ -1005,16 +925,17 @@
         </div>
         <!-- tiny footer -->
         <div class="grid grid-cols-12 gap-4 items-center py-[27px]">
-          <div class="col-span-12 md:col-span-6">
-            <div class="logo max-w-[215px] min-w-[215px] w-full mx-auto lg:ml-0">
-              <img class="h-8 mx-auto lg:ml-0" src="./assets/images/home-2/logo.png" alt="" />
+          <a href="index2.html" class="w-full md:max-w-[213px] lg:max-w-[213px]">
+            <div class="flex items-center">
+              <span class="font-satisfy text-4xl text-Bright-Orange">Gus</span>
+              <span class="font-plus-jakarta-sans font-bold text-4xl text-white">to</span>
             </div>
-          </div>
+          </a>
           <div class="col-span-12 md:col-span-6 text-right">
             <p class="font-jost font-normal lg:text-[14px] xl:text-[18px] leading-[26px] text-white text-center lg:text-right">
               &copy;
               <span id="year"></span>
-              <a href="https://themeforest.net/user/website_stock">website_stock</a>
+              <a href="">Gusto</a>
               . All Rights Reserved.
             </p>
           </div>
