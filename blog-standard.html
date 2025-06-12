@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restfast</title>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- flag-icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
+    <!-- animate css -->
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="./assets/css/flowbite.min.css">
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="./assets/css/swiper.min.css">
+
+    <!-- magnific-popup css -->
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
+
+    <!-- jquery-ui css -->
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-Deep-Teal">
+    <!-- header part start -->
+    <header class="header-wrapper">
+        <div class="top-header relative z-50 pb-2 md:pb-0">
+            <div class="container">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <ul
+                                class="flex items-center justify-center bg-International-Orange px-[15px] md:px-[31px] py-[6px] md:py-[12px] gap-6 text-white h-full">
+                                <li class="">
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="flex items-center gap-x-0 lg:gap-x-[18px] xl:gap-x-[25px]">
+                                <!-- currency -->
+                                <div class="country">
+                                    <span
+                                        class="flex items-center justify-start text-white gap-[3px] font-jost font-normal text-[12px] md:text-[12px] lg:text-[15px] leading-[24px]">
+                                        <span id="currency" class="px-[10px] cursor-pointer block text-white">USD</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </span>
+                                    <div id="currency-drop"
+                                        class="dropdown hidden absolute border max-h-[150px] overflow-y-auto">
+                                        <ul class="list-none p-0 m-0 text-white">
+                                            <li
+                                                class="p-[10px] cursor-pointer bg-Deep-Teal hover:text-Deep-Teal hover:bg-white transition-all ease-linear duration-300">
+                                                USD
+                                            </li>
+                                            <li
+                                                class="p-[10px] cursor-pointer bg-Deep-Teal hover:text-Deep-Teal hover:bg-white transition-all ease-linear duration-300">
+                                                BDT
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- country dropdown -->
+                                <div class="country">
+                                    <span
+                                        class="px-[10px] cursor-pointer w-[120px] text-white flex items-center justify-center gap-[5px] font-jost font-normal text-[12px] md:text-[12px] lg:text-[15px] leading-[24px]">
+                                        <span id="country"
+                                            class="p-[10px] cursor-pointer flex items-center justify-center gap-[5px]">
+                                            <i
+                                                class="flag-icon flag-icon-us me-[5px] lg:w-[20px] xl:w-[30px] lg:h-[20px] xl:h-[30px]"></i>
+                                            <span class="inline-block">English</span>
+                                        </span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </span>
+                                    <div id="country-drop"
+                                        class="dropdown hidden absolute bg-white border max-h-[150px] overflow-y-auto ">
+                                        <ul class="list-none p-0 m-0">
+                                            <li class="p-[10px] cursor-pointer hover:bg-black hover:text-white flex items-center justify-between gap-[5px]"
+                                                data-name="english">
+                                                <i
+                                                    class="flag-icon flag-icon-us me-[5px] lg:w-[20px] xl:w-[30px] lg:h-[20px] xl:h-[30px]"></i>
+                                                <span class="inline-block">English</span>
+                                            </li>
+                                            <li class="p-[10px] cursor-pointer hover:bg-black hover:text-white  flex items-center justify-between gap-[5px]"
+                                                data-name="french">
+                                                <i
+                                                    class="flag-icon flag-icon-fr  me-[5px] lg:w-[20px] xl:w-[30px] lg:h-[20px] xl:h-[30px]"></i><span
+                                                    class="inline-block">French</span>
+                                            </li>
+                                            <li class="p-[10px] cursor-pointer hover:bg-black hover:text-white  flex items-center justify-between gap-[5px]"
+                                                data-name="spanish">
+                                                <i
+                                                    class="flag-icon flag-icon-es  me-[5px] lg:w-[20px] xl:w-[30px] lg:h-[20px] xl:h-[30px]"></i><span
+                                                    class="inline-block">Spanich</span>
+                                            </li>
+                                            <li class="p-[10px] cursor-pointer hover:bg-black hover:text-white  flex items-center justify-between gap-[5px]"
+                                                data-name="arabic">
+                                                <i
+                                                    class="flag-icon flag-icon-sa  me-[5px] lg:w-[20px] xl:w-[30px] lg:h-[20px] xl:h-[30px]"></i><span
+                                                    class="inline-block">Arabic</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-6">
+                        <div
+                            class="flex items-center justify-center flex-wrap md:justify-end h-full gap-y-2 gap-x-2 md:gap-x-4 lg:gap-x-4 xl:gap-x-[35px] text-white">
+                            <p
+                                class="text-right font-jost font-normal md:text-[12px] lg:text-[12px] xl:text-[15px] leading-[24px] inline-flex items-center justify-start gap-[7px]">
+                                <span>
+                                    <svg width="13" height="18" viewBox="0 0 13 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.45294 0C4.74221 0.00228587 3.1022 0.687839 1.89253 1.90633C0.682859 3.12482 0.00226932 4.77679 0 6.5C0 11.1665 6.01199 17.011 6.26741 17.2575C6.3171 17.3061 6.38365 17.3334 6.45294 17.3334C6.52222 17.3334 6.58877 17.3061 6.63846 17.2575C6.89389 17.011 12.9059 11.1665 12.9059 6.5C12.9036 4.77679 12.223 3.12482 11.0133 1.90633C9.80368 0.687839 8.16366 0.00228587 6.45294 0ZM6.45294 9.47917C5.86798 9.47917 5.29616 9.30444 4.80978 8.97709C4.32341 8.64973 3.94433 8.18445 3.72047 7.64008C3.49662 7.09571 3.43805 6.4967 3.55217 5.91879C3.66629 5.34089 3.94797 4.81006 4.3616 4.39341C4.77523 3.97677 5.30222 3.69303 5.87594 3.57808C6.44966 3.46313 7.04433 3.52212 7.58476 3.74761C8.12519 3.9731 8.5871 4.35494 8.91209 4.84486C9.23707 5.33479 9.41053 5.91078 9.41053 6.5C9.41006 7.28998 9.09831 8.04747 8.54375 8.60607C7.9892 9.16467 7.2372 9.47869 6.45294 9.47917Z"
+                                            fill="#DF3F01" />
+                                    </svg>
+                                </span>
+                                734 H, Bryan Burlington, NC 27215
+                            </p>
+                            <a href="#"
+                                class="text-right font-jost font-normal md:text-[12px] lg:text-[12px] xl:text-[15px] leading-[24px] inline-flex items-center justify-start gap-[7px]">
+                                <span>
+                                    <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.5745 8.42188C12.4167 7.52625 12.9374 6.32438 12.9374 5C12.9374 2.24313 10.6966 0 7.94264 0C5.18863 0 2.94784 2.24313 2.94784 5C2.94784 6.32438 3.46855 7.52625 4.31079 8.42188C1.81464 9.81625 0.450439 12.77 0.450439 16.875C0.450439 17.2206 0.730148 17.5 1.07479 17.5H14.8105C15.1557 17.5 15.4348 17.2206 15.4348 16.875C15.4348 12.7694 14.0706 9.81625 11.5745 8.42188ZM7.94264 1.25C10.0086 1.25 11.6887 2.93187 11.6887 5C11.6887 7.06812 10.0086 8.75 7.94264 8.75C5.87666 8.75 4.19654 7.06812 4.19654 5C4.19654 2.93187 5.87666 1.25 7.94264 1.25ZM1.71038 16.25C1.8084 13.6038 2.57697 10.5044 5.38343 9.28563C6.13265 9.73625 7.00674 10 7.94264 10C8.87854 10 9.75263 9.73625 10.5018 9.28563C13.3077 10.5037 14.0769 13.6038 14.1743 16.25H1.71038Z"
+                                            fill="#DF3F01" />
+                                    </svg>
+                                </span>Login or Register
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header part ends -->
+
+    <!-- banner part start -->
+    <div class="banner-wrapper overflow-x-hidden">
+        <div class="header absolute w-full pt-6 z-20 header--sticky">
+            <div class="container">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12">
+                        <nav aria-label="Primary">
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-1 w-full items-center justify-between">
+                                    <a href="index.html" class="w-full md:max-w-[200px] lg:max-w-[215px] min-w-[215px]">
+                                        <img src="./assets/images/logo.png" class="h-8" alt="Logo">
+                                    </a>
+                                    <button data-collapse-toggle="navbar-dropdown" type="button"
+                                        class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2"
+                                        aria-controls="navbar-dropdown" aria-expanded="false">
+                                        <span class="sr-only">Open main menu</span>
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="#fff" viewBox="0 0 17 14">
+                                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="hidden w-full md:block md:w-auto absolute md:relative left-0 top-full bg-Deep-Teal md:bg-transparent"
+                                    id="navbar-dropdown">
+                                    <ul
+                                        class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[40px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">
+                                        <li @click.away="open = false" class="relative" x-data="{ open: false }">
+                                            <button type="button" @click="open = !open"
+                                                class="flex flex-row items-center w-full md:w-auto md:inline-flex">
+                                                <span>Home</span>
+                                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                                    :class="{'rotate-180': open, 'rotate-0': !open}"
+                                                    class="inline w-4 h-4 ml-1 transition-transform duration-200 transform">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                                x-transition:enter-start="transform opacity-0 scale-95"
+                                                x-transition:enter-end="transform opacity-100 scale-100"
+                                                x-transition:leave="transition ease-in duration-75"
+                                                x-transition:leave-start="transform opacity-100 scale-100"
+                                                x-transition:leave-end="transform opacity-0 scale-95"
+                                                class="absolute right-0 w-max mt-2 origin-top-right bg-Deep-Teal z-[1]">
+                                                <ul aria-labelledby="dropdownLargeButton">
+                                                    <li>
+                                                        <a href="index.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Home
+                                                            - 1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="index2.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Home
+                                                            - 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="index3.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Home
+                                                            - 3</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li class="mx-0">
+                                            <a href="about-us.html"
+                                                class="flex flex-row items-center w-full text-sm font-semibold text-left bg-transparent md:w-auto md:inline-flex text-white">About
+                                                Us</a>
+                                        </li>
+                                        <li @click.away="open = false" class="relative" x-data="{ open: false }">
+                                            <button type="button" @click="open = !open"
+                                                class="flex flex-row items-center w-full text-sm font-semibold text-left bg-transparent md:w-auto md:inline-flex text-white">Pages
+                                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                                    :class="{'rotate-180': open, 'rotate-0': !open}"
+                                                    class="inline w-4 h-4 ml-1 transition-transform duration-200 transform">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <!-- Pages Dropdown menu -->
+                                            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                                x-transition:enter-start="transform opacity-0 scale-95"
+                                                x-transition:enter-end="transform opacity-100 scale-100"
+                                                x-transition:leave="transition ease-in duration-75"
+                                                x-transition:leave-start="transform opacity-100 scale-100"
+                                                x-transition:leave-end="transform opacity-0 scale-95"
+                                                class="absolute right-0 w-max mt-2 origin-top-right bg-Deep-Teal z-[1]">
+                                                <ul aria-labelledby="dropdownLargeButton">
+                                                    <li>
+                                                        <a href="about-us.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">About
+                                                            Us</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="our-menu.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Our
+                                                            Menu</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="reservation.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Reservation</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="meet-the-chef.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Meet
+                                                            The Chef</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="the-chef-single.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">The
+                                                            Chef Single</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop-pages.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop
+                                                            Pages</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop-details.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop
+                                                            Details</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="faq.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Faq</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-grid.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Blog
+                                                            Grid</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-standard.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Blog
+                                                            Standard</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-details.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Blog
+                                                            Details</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="contact-us.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Contact
+                                                            Us</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li @click.away="open = false" class="relative" x-data="{ open: false }">
+                                            <button type="button" @click="open = !open"
+                                                class="flex flex-row items-center w-full text-sm font-semibold text-left bg-transparent md:w-auto md:inline-flex text-white">Shop
+                                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                                    :class="{'rotate-180': open, 'rotate-0': !open}"
+                                                    class="inline w-4 h-4 ml-1 transition-transform duration-200 transform">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <!-- Dropdown menu -->
+                                            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                                x-transition:enter-start="transform opacity-0 scale-95"
+                                                x-transition:enter-end="transform opacity-100 scale-100"
+                                                x-transition:leave="transition ease-in duration-75"
+                                                x-transition:leave-start="transform opacity-100 scale-100"
+                                                x-transition:leave-end="transform opacity-0 scale-95"
+                                                class="absolute right-0 w-max mt-2 origin-top-right bg-Deep-Teal z-[1]">
+                                                <ul aria-labelledby="dropdownLargeButton">
+                                                    <li>
+                                                        <a href="shop-pages.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop
+                                                            Pages</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop-details.html"
+                                                            class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop
+                                                            Details</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="blog-standard.html"
+                                                class="flex flex-row items-center w-full text-sm font-semibold text-left bg-transparent md:w-auto md:inline-flex text-white">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact-us.html"
+                                                class="flex flex-row items-center w-full text-sm font-semibold text-left bg-transparent md:w-auto md:inline-flex text-white">Contacts</a>
+                                        </li>
+                                        <li>
+                                            <a href="reservation.html"
+                                                class="btn inline-flex items-center justify-center gap-x-[7px] font-jost font-normal leading-[40px] md:leading-[56px] text-[14px] md:text-[14px] text-white bg-International-Orange px-[12px] lg:px-[41px] rounded-md">
+                                                <span class="btn__ink"></span>
+                                                <div class="btn__inner">Book Now</div>
+                                                <span>
+                                                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.23096 5.78125L1.66846 10.4062C1.51221 10.5625 1.26221 10.5625 1.13721 10.4062L0.512207 9.78125C0.355957 9.625 0.355957 9.40625 0.512207 9.25L4.19971 5.5L0.512207 1.78125C0.355957 1.625 0.355957 1.375 0.512207 1.25L1.13721 0.625C1.26221 0.46875 1.51221 0.46875 1.66846 0.625L6.23096 5.25C6.38721 5.40625 6.38721 5.625 6.23096 5.78125Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- banner slider -->
+        <div class="banner relative">
+            <div class="banner-slider-item bg-black/50">
+                <div class="container py-[70px] md:py-[171px]">
+                    <h1
+                        class="font-plus-jakarta-sans font-bold text-lg md:text-[30px] lg:text-[48px] leading-[60px] text-white split-collab">
+                        Blog Standard
+                    </h1>
+                </div>
+                <div
+                    class="breadcum absolute bottom-0 right-0 z-10 w-[300px] lg:w-[453px] bg-International-Orange flex items-center justify-start py-[14px] px-[31px] gap-1 font-plus-jakarta-sans font-medium text-base md:text-[18px] leading-[28px] text-white rounded-tl-[5px]">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span> Blog Standard</span>
+                </div>
+            </div>
+            <img class="w-full h-full absolute top-0 left-0 -z-10" src="./assets/images/blog-details/hero-bg.png"
+                alt="hero-bg">
+        </div>
+    </div>
+    <!-- banner part ends -->
+
+    <!-- blog details -->
+    <div class="service-details py-[150px] fade-in">
+        <div class="container">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-12 lg:col-span-8 order-2 lg:order-1">
+                    <div class="left-bar">
+                        <div class="service-1 mb-[30px]">
+                            <div class="comment bg-texture bg-no-repeat bg-cover bg-center py-[42px] px-8 mb-10">
+                                <div class="icon mb-[15px]">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.48369 2.98633C4.94392 2.98633 5.31744 3.35985 5.31744 3.82008C5.31744 4.28031 4.94392 4.65383 4.48369 4.65383H3.7825C3.32394 4.65383 2.94875 5.02902 2.94875 5.48758V17.9938C2.94875 18.4524 3.32394 18.8276 3.7825 18.8276H11.0361C11.4588 18.8276 11.8148 19.1436 11.864 19.5638C12.0391 21.052 12.3843 24.9907 10.3708 29.1928C9.06762 31.9183 7.32341 33.7617 5.92438 34.9406C7.62523 35.014 10.1315 34.7639 12.481 33.1481C12.8604 32.8871 13.3798 32.983 13.6407 33.3624C13.9017 33.7417 13.8059 34.2611 13.4265 34.5221C9.13852 37.4702 4.40533 36.4956 3.60159 36.3163C3.2756 36.2438 3.02381 35.9845 2.96295 35.656C2.90125 35.3275 3.04214 34.994 3.31978 34.8089C4.50787 34.0168 7.12419 32.1167 8.86673 28.4724C10.4192 25.2333 10.415 22.1651 10.2816 20.4951H3.7825C2.40681 20.4951 1.28125 19.3695 1.28125 17.9938V5.48758C1.28125 4.11189 2.40681 2.98633 3.7825 2.98633H4.48369ZM17.06 30.4651C16.8398 30.8694 16.3329 31.0178 15.9286 30.7977C15.525 30.5768 15.3758 30.0699 15.5967 29.6663C17.3318 26.4897 17.1225 23.1647 17.1225 22.9963V5.48758C17.1225 5.02902 16.7473 4.65383 16.2888 4.65383H7.00662C6.54639 4.65383 6.17287 4.28031 6.17287 3.82008C6.17287 3.35985 6.54639 2.98633 7.00662 2.98633H16.2888C17.6644 2.98633 18.79 4.11189 18.79 5.48758V22.9963C18.79 23.1848 19.0043 26.9058 17.06 30.4651Z"
+                                            fill="#DF3F01" />
+                                        <path
+                                            d="M15.2551 33.0688C15.7153 33.0688 16.0884 32.6958 16.0884 32.2356C16.0884 31.7754 15.7153 31.4023 15.2551 31.4023C14.7949 31.4023 14.4219 31.7754 14.4219 32.2356C14.4219 32.6958 14.7949 33.0688 15.2551 33.0688Z"
+                                            fill="#DF3F01" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M37.9658 6.34385C37.9658 6.80408 37.5923 7.1776 37.132 7.1776C36.6718 7.1776 36.2983 6.80408 36.2983 6.34385V5.48758C36.2983 5.02902 35.9231 4.65383 35.4645 4.65383H22.9583C22.4997 4.65383 22.1245 5.02902 22.1245 5.48758V17.9938C22.1245 18.4524 22.4997 18.8276 22.9583 18.8276H30.2119C30.6346 18.8276 30.9906 19.1436 31.0398 19.5638C31.2149 21.052 31.5601 24.9907 29.5466 29.1928C28.2434 31.9183 26.4992 33.7617 25.1002 34.9406C26.801 35.014 29.3065 34.7639 31.656 33.1489C36.7235 29.6397 36.2983 23.2306 36.2983 22.9963V8.86678C36.2983 8.40655 36.6718 8.03303 37.132 8.03303C37.5923 8.03303 37.9658 8.40655 37.9658 8.86678V22.9963C37.9658 23.2623 38.3743 30.5259 32.6039 34.5204L32.6023 34.5221C28.3143 37.4702 23.5811 36.4956 22.7774 36.3163C22.4514 36.2438 22.1996 35.9845 22.1387 35.656C22.077 35.3275 22.2179 34.994 22.4956 34.8089C23.6836 34.0168 26.3 32.1167 28.0425 28.4724C29.5949 25.2333 29.5907 22.1651 29.4573 20.4951H22.9583C21.5826 20.4951 20.457 19.3695 20.457 17.9938V5.48758C20.457 4.11189 21.5826 2.98633 22.9583 2.98633H35.4645C36.8402 2.98633 37.9658 4.11189 37.9658 5.48758V6.34385Z"
+                                            fill="#DF3F01" />
+                                    </svg>
+                                </div>
+                                <p class="description font-jost font-normal text-base leading-[26px] text-white mb-10">
+                                    Tosser argy-bargy mush loo at public school Elizabeth up
+                                    the duff buggered chinwag on your bike mate don’t get
+                                    shirty with me super, Jeffrey bobby Richard cheesed off
+                                    spend a penny a load of old tosh blag horseTosser
+                                    argy-bargy mush loo at public school Elizabeth up the duff
+                                    buggered chinwag on your bike mate don’t get
+                                </p>
+                                <p
+                                    class="title font-plus-jakarta-sans font-bold text-[24px] leading-[34px] text-International-Orange pl-12 relative after:w-[40px] after:h-[3px] after:bg-International-Orange after:rounded-[2px] after:absolute after:top-1/2 after:left-0">
+                                    Silvester
+                                    Scott</p>
+                            </div>
+                            <div class="img relative mb-[29px] wow overlay-anim zoom-effect overflow-hidden">
+                                <img class="w-full h-full" src="./assets/images/blog-standard/blog-standard-1.png"
+                                    alt="">
+                                <a href="https://www.youtube.com/watch?v=pGbIOC83-So"
+                                    class="play-btn popup-video before:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <svg width="112" height="112" viewBox="0 0 112 112" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="56" cy="56" r="45" fill="white" />
+                                        <circle id="dotted" cx="56" cy="56" r="55" stroke="white" stroke-width="2"
+                                            stroke-linejoin="round" stroke-dasharray="4 4" />
+                                        <g clip-path="url(#clip0_486_3245)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M71.0473 54.065L43.6106 38.2241C43.3597 38.078 43.0747 38.0006 42.7844 37.9995H42.7796C42.4891 38.0007 42.204 38.0782 41.9529 38.2242C41.7 38.3684 41.49 38.5774 41.3445 38.8295C41.199 39.0817 41.1233 39.3681 41.125 39.6592V71.3408C41.1239 71.6321 41.1997 71.9185 41.3449 72.1711C41.49 72.4237 41.6994 72.6334 41.9516 72.7791C42.2039 72.9248 42.4902 73.0012 42.7815 73.0006C43.0729 73.0001 43.3589 72.9225 43.6106 72.7759L71.0473 56.9349C71.2992 56.7895 71.5084 56.5803 71.6538 56.3284C71.7993 56.0766 71.8758 55.7908 71.8758 55.5C71.8758 55.2091 71.7993 54.9234 71.6538 54.6715C71.5084 54.4196 71.2992 54.2104 71.0473 54.065Z"
+                                                fill="#DF3F01" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_486_3245">
+                                                <rect width="35" height="35" fill="white"
+                                                    transform="translate(39 38)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                            <span
+                                class="publish-by-date flex items-center justify-start font-jost font-normal text-[17px] leading-[26px] text-white mb-[11px]">
+                                By Admin / 17 Aug 2024 / Digital
+                            </span>
+                            <h2
+                                class="font-plus-jakarta-sans font-semibold text-[35px] leading-[45px] text-white mb-[15px]">
+                                Restaurants Are Changing The Foods
+                                Landscape And It&apos;s Fun</h2>
+                            <p class="font-jost font-normal text-[16px] leading-[26px] text-white mb-[30px]">
+                                Global business consultancies play a critical role in driving thought leadership and
+                                knowledge exchange on a global scale. Through industry reports, white papers, seminars,
+                                and conferences, these firms share insights, best practices, and emerging trends that
+                                shape the future of international business.
+                            </p>
+                            <a href="blog-details.html"
+                                class="btn inline-flex items-center justify-center gap-x-[7px] font-jost font-normal leading-[40px] md:leading-[56px] text-[14px] md:text-[14px] text-white bg-International-Orange px-[12px] lg:px-[41px] rounded-md"
+                                data-abc="true">
+                                <span class="btn__ink"></span>
+                                <div class="btn__inner">Read More</div>
+                                <span>
+                                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.23096 5.78125L1.66846 10.4062C1.51221 10.5625 1.26221 10.5625 1.13721 10.4062L0.512207 9.78125C0.355957 9.625 0.355957 9.40625 0.512207 9.25L4.19971 5.5L0.512207 1.78125C0.355957 1.625 0.355957 1.375 0.512207 1.25L1.13721 0.625C1.26221 0.46875 1.51221 0.46875 1.66846 0.625L6.23096 5.25C6.38721 5.40625 6.38721 5.625 6.23096 5.78125Z"
+                                            fill="white"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="service-1 zoom-effect mb-[30px]">
+                            <div class="img overflow-hidden mb-[25px] wow overlay-anim zoom-effect">
+                                <img class="w-full h-full" src="./assets/images/blog-standard/blog-standard-2.png"
+                                    alt="">
+                            </div>
+                            <span
+                                class="publish-by-date flex items-center justify-start font-jost font-normal text-[17px] leading-[26px] text-white mb-[11px]">
+                                By Admin / 17 Aug 2024 / Digital
+                            </span>
+                            <h2
+                                class="font-plus-jakarta-sans font-semibold text-[35px] leading-[45px] text-white mb-[15px]">
+                                All the Greatest Moments of Thoroughbred</h2>
+                            <p class="font-jost font-normal text-[16px] leading-[26px] text-white mb-[30px]">
+                                Global business consultancies play a critical role in driving thought leadership and
+                                knowledge exchange on a global scale. Through industry reports, white papers, seminars,
+                                and conferences, these firms share insights, best practices, and emerging trends that
+                                shape the future of international business.
+                            </p>
+                            <a href="blog-details.html"
+                                class="btn inline-flex items-center justify-center gap-x-[7px] font-jost font-normal leading-[40px] md:leading-[56px] text-[14px] md:text-[14px] text-white bg-International-Orange px-[12px] lg:px-[41px] rounded-md"
+                                data-abc="true">
+                                <span class="btn__ink"></span>
+                                <div class="btn__inner"> Read More</div>
+                                <span>
+                                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.23096 5.78125L1.66846 10.4062C1.51221 10.5625 1.26221 10.5625 1.13721 10.4062L0.512207 9.78125C0.355957 9.625 0.355957 9.40625 0.512207 9.25L4.19971 5.5L0.512207 1.78125C0.355957 1.625 0.355957 1.375 0.512207 1.25L1.13721 0.625C1.26221 0.46875 1.51221 0.46875 1.66846 0.625L6.23096 5.25C6.38721 5.40625 6.38721 5.625 6.23096 5.78125Z"
+                                            fill="white"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="service-1 mb-10">
+                            <div class="img mb-[25px] wow overlay-anim zoom-effect overflow-hidden">
+                                <img src="./assets/images/blog-standard/blog-standard-3.png" alt="">
+                            </div>
+                            <span
+                                class="publish-by-date flex items-center justify-start font-jost font-normal text-[17px] leading-[26px] text-white mb-[11px]">
+                                By Admin / 17 Aug 2024 / Digital
+                            </span>
+                            <h2
+                                class="font-plus-jakarta-sans font-semibold text-[35px] leading-[45px] text-white mb-[15px]">
+                                One CEO Describe That Goes Into Turning</h2>
+                            <p class="font-jost font-normal text-[16px] leading-[26px] text-white mb-[30px]">
+                                Why Roofing are factmake 17 Reason EasierForesee the pain &amp;
+                                trouble that are bounds too ensue equalidea off denouncing
+                                pleasures and praising pain was borncomplete account and
+                                expound the actual teachings the great the master-builder of
+                                human happiness. In a free hour...
+                            </p>
+                            <a href="blog-details.html"
+                                class="btn inline-flex items-center justify-center gap-x-[7px] font-jost font-normal leading-[40px] md:leading-[56px] text-[14px] md:text-[14px] text-white bg-International-Orange px-[12px] lg:px-[41px] rounded-md"
+                                data-abc="true">
+                                <span class="btn__ink"></span>
+                                <div class="btn__inner"> Read More</div>
+                                <span>
+                                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.23096 5.78125L1.66846 10.4062C1.51221 10.5625 1.26221 10.5625 1.13721 10.4062L0.512207 9.78125C0.355957 9.625 0.355957 9.40625 0.512207 9.25L4.19971 5.5L0.512207 1.78125C0.355957 1.625 0.355957 1.375 0.512207 1.25L1.13721 0.625C1.26221 0.46875 1.51221 0.46875 1.66846 0.625L6.23096 5.25C6.38721 5.40625 6.38721 5.625 6.23096 5.78125Z"
+                                            fill="white"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination flex items-center justify-center gap-5">
+                                <li class="page-item">
+                                    <a class="page-link w-[41px] h-[41px] inline-flex items-center justify-center border border-International-Orange hover:border-International-Orange hover:bg-International-Orange bg-International-Orange text-white font-Poppins font-medium text-[20px] leading-[41px] rounded-full transition-all ease-linear duration-300"
+                                        href="#">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link w-[41px] h-[41px] inline-flex items-center justify-center border border-white hover:border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[20px] leading-[41px] rounded-full transition-all ease-linear duration-300"
+                                        href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link w-[41px] h-[41px] inline-flex items-center justify-center border border-white hover:border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[20px] leading-[41px] rounded-full transition-all ease-linear duration-300"
+                                        href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-12 col-span-4 order-1 order-2">
+                    <div class="right-bar position-sticky top-0">
+                        <form action="#" class="mb-[26px]">
+                            <div
+                                class="relative bg-texture bg-no-repeat bg-cover bg-center py-[21px] px-8 flex items-center justify-start">
+                                <input
+                                    class="w-full h-[55px] bg-transparent border-International-Orange rounded-tl-[4px] rounded-bl-[4px] font-jost font-bold text-[16px] leading-[26px] text-white placeholder:text-International-Orange focus:ring-0 focus:shadow-none focus:border-International-Orange"
+                                    type="text" placeholder="Search">
+                                <button
+                                    class="bg-International-Orange w-[64px] h-[55px] rounded-tr-[4px] rounded-br-[4px] flex items-center justify-center"
+                                    type="submit">
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M7.41732 0.645996C3.68086 0.645996 0.646484 3.68037 0.646484 7.41683C0.646484 11.1533 3.68086 14.1877 7.41732 14.1877C11.1538 14.1877 14.1882 11.1533 14.1882 7.41683C14.1882 3.68037 11.1538 0.645996 7.41732 0.645996ZM7.41732 1.68766C10.5798 1.68766 13.1465 4.25433 13.1465 7.41683C13.1465 10.5793 10.5798 13.146 7.41732 13.146C4.25482 13.146 1.68815 10.5793 1.68815 7.41683C1.68815 4.25433 4.25482 1.68766 7.41732 1.68766Z"
+                                            fill="white" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M18.2022 17.4647L12.2033 11.4668C12.0001 11.2637 11.6699 11.2637 11.4668 11.4668C11.2637 11.6699 11.2637 12.0001 11.4668 12.2033L17.4647 18.2022C17.6689 18.4053 17.998 18.4053 18.2022 18.2022C18.4053 17.998 18.4053 17.6689 18.2022 17.4647Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="main-service bg-texture bg-no-repeat bg-cover bg-center py-[50px] px-8 mb-[30px]">
+                            <h2
+                                class="comment-title font-plus-jakarta-sans font-semibold text-[24px] leading-[55px] text-white relative after:w-[70px] after:h-[3px] after:bg-International-Orange after:rounded-[2px] after:absolute after:bottom-0 after:left-0 mb-11">
+                                Main Services</h2>
+                            <ul class="flex items-start justify-start flex-col gap-7 w-full">
+                                <li class="w-full font-nunito font-bold text-[17px] leading-[26px] group">
+                                    <a class="flex items-center justify-between border-b border-white/10 pb-[15px] w-full text-white group-hover:text-International-Orange group-hover:border-International-Orange transition-all ease-linear duration-300"
+                                        href="#">App Development
+                                        <span>
+                                            <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="group-hover:fill-International-Orange transition-all ease-linear duration-300"
+                                                    d="M1.88974 0.177498C1.67328 0.172737 1.46071 0.235487 1.28159 0.357119C1.10247 0.478752 0.965695 0.653256 0.890286 0.856214C0.814877 1.05917 0.804578 1.28055 0.86082 1.48963C0.917063 1.69872 1.03705 1.88499 1.20411 2.02273L7.57821 7.48333L1.20411 12.942C1.08855 13.0269 0.991769 13.1348 0.919832 13.2588C0.847895 13.3829 0.80235 13.5205 0.786049 13.663C0.769747 13.8055 0.783041 13.9498 0.825098 14.0869C0.867154 14.224 0.937067 14.351 1.03046 14.4598C1.12385 14.5687 1.23871 14.657 1.36784 14.7194C1.49697 14.7818 1.63759 14.8168 1.7809 14.8223C1.92421 14.8279 2.06712 14.8038 2.20067 14.7516C2.33423 14.6993 2.45555 14.62 2.55705 14.5187L9.85482 8.27475C9.96943 8.17695 10.0615 8.05556 10.1246 7.91875C10.1877 7.78194 10.2203 7.63303 10.2203 7.48237C10.2203 7.33171 10.1877 7.1828 10.1246 7.046C10.0615 6.90919 9.96943 6.78768 9.85482 6.68988L2.55705 0.439901C2.3727 0.276154 2.13624 0.1833 1.88974 0.177498Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="w-full font-nunito font-bold text-[17px] leading-[26px] group">
+                                    <a class="flex items-center justify-between border-b border-white/10 pb-[15px] w-full text-white group-hover:text-International-Orange group-hover:border-International-Orange transition-all ease-linear duration-300"
+                                        href="service.html">
+                                        SEO Marketing
+                                        <span>
+                                            <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="group-hover:fill-International-Orange transition-all ease-linear duration-300"
+                                                    d="M1.88974 0.177498C1.67328 0.172737 1.46071 0.235487 1.28159 0.357119C1.10247 0.478752 0.965695 0.653256 0.890286 0.856214C0.814877 1.05917 0.804578 1.28055 0.86082 1.48963C0.917063 1.69872 1.03705 1.88499 1.20411 2.02273L7.57821 7.48333L1.20411 12.942C1.08855 13.0269 0.991769 13.1348 0.919832 13.2588C0.847895 13.3829 0.80235 13.5205 0.786049 13.663C0.769747 13.8055 0.783041 13.9498 0.825098 14.0869C0.867154 14.224 0.937067 14.351 1.03046 14.4598C1.12385 14.5687 1.23871 14.657 1.36784 14.7194C1.49697 14.7818 1.63759 14.8168 1.7809 14.8223C1.92421 14.8279 2.06712 14.8038 2.20067 14.7516C2.33423 14.6993 2.45555 14.62 2.55705 14.5187L9.85482 8.27475C9.96943 8.17695 10.0615 8.05556 10.1246 7.91875C10.1877 7.78194 10.2203 7.63303 10.2203 7.48237C10.2203 7.33171 10.1877 7.1828 10.1246 7.046C10.0615 6.90919 9.96943 6.78768 9.85482 6.68988L2.55705 0.439901C2.3727 0.276154 2.13624 0.1833 1.88974 0.177498Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="w-full font-nunito font-bold text-[17px] leading-[26px] group">
+                                    <a class="flex items-center justify-between border-b border-white/10 pb-[15px] w-full text-white group-hover:text-International-Orange group-hover:border-International-Orange transition-all ease-linear duration-300"
+                                        href="service.html">
+                                        SEO Analysis
+                                        <span>
+                                            <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="group-hover:fill-International-Orange transition-all ease-linear duration-300"
+                                                    d="M1.88974 0.177498C1.67328 0.172737 1.46071 0.235487 1.28159 0.357119C1.10247 0.478752 0.965695 0.653256 0.890286 0.856214C0.814877 1.05917 0.804578 1.28055 0.86082 1.48963C0.917063 1.69872 1.03705 1.88499 1.20411 2.02273L7.57821 7.48333L1.20411 12.942C1.08855 13.0269 0.991769 13.1348 0.919832 13.2588C0.847895 13.3829 0.80235 13.5205 0.786049 13.663C0.769747 13.8055 0.783041 13.9498 0.825098 14.0869C0.867154 14.224 0.937067 14.351 1.03046 14.4598C1.12385 14.5687 1.23871 14.657 1.36784 14.7194C1.49697 14.7818 1.63759 14.8168 1.7809 14.8223C1.92421 14.8279 2.06712 14.8038 2.20067 14.7516C2.33423 14.6993 2.45555 14.62 2.55705 14.5187L9.85482 8.27475C9.96943 8.17695 10.0615 8.05556 10.1246 7.91875C10.1877 7.78194 10.2203 7.63303 10.2203 7.48237C10.2203 7.33171 10.1877 7.1828 10.1246 7.046C10.0615 6.90919 9.96943 6.78768 9.85482 6.68988L2.55705 0.439901C2.3727 0.276154 2.13624 0.1833 1.88974 0.177498Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="w-full font-nunito font-bold text-[17px] leading-[26px] group">
+                                    <a class="flex items-center justify-between border-b border-white/10 pb-[15px] w-full text-white group-hover:text-International-Orange group-hover:border-International-Orange transition-all ease-linear duration-300"
+                                        href="service.html">
+                                        SEO Optimization
+                                        <span>
+                                            <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="group-hover:fill-International-Orange transition-all ease-linear duration-300"
+                                                    d="M1.88974 0.177498C1.67328 0.172737 1.46071 0.235487 1.28159 0.357119C1.10247 0.478752 0.965695 0.653256 0.890286 0.856214C0.814877 1.05917 0.804578 1.28055 0.86082 1.48963C0.917063 1.69872 1.03705 1.88499 1.20411 2.02273L7.57821 7.48333L1.20411 12.942C1.08855 13.0269 0.991769 13.1348 0.919832 13.2588C0.847895 13.3829 0.80235 13.5205 0.786049 13.663C0.769747 13.8055 0.783041 13.9498 0.825098 14.0869C0.867154 14.224 0.937067 14.351 1.03046 14.4598C1.12385 14.5687 1.23871 14.657 1.36784 14.7194C1.49697 14.7818 1.63759 14.8168 1.7809 14.8223C1.92421 14.8279 2.06712 14.8038 2.20067 14.7516C2.33423 14.6993 2.45555 14.62 2.55705 14.5187L9.85482 8.27475C9.96943 8.17695 10.0615 8.05556 10.1246 7.91875C10.1877 7.78194 10.2203 7.63303 10.2203 7.48237C10.2203 7.33171 10.1877 7.1828 10.1246 7.046C10.0615 6.90919 9.96943 6.78768 9.85482 6.68988L2.55705 0.439901C2.3727 0.276154 2.13624 0.1833 1.88974 0.177498Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="w-full font-nunito font-bold text-[17px] leading-[26px] group">
+                                    <a class="flex items-center justify-between border-b border-white/10 pb-[15px] w-full text-white group-hover:text-International-Orange group-hover:border-International-Orange transition-all ease-linear duration-300"
+                                        href="service.html">
+                                        Social Media
+                                        <span>
+                                            <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="group-hover:fill-International-Orange transition-all ease-linear duration-300"
+                                                    d="M1.88974 0.177498C1.67328 0.172737 1.46071 0.235487 1.28159 0.357119C1.10247 0.478752 0.965695 0.653256 0.890286 0.856214C0.814877 1.05917 0.804578 1.28055 0.86082 1.48963C0.917063 1.69872 1.03705 1.88499 1.20411 2.02273L7.57821 7.48333L1.20411 12.942C1.08855 13.0269 0.991769 13.1348 0.919832 13.2588C0.847895 13.3829 0.80235 13.5205 0.786049 13.663C0.769747 13.8055 0.783041 13.9498 0.825098 14.0869C0.867154 14.224 0.937067 14.351 1.03046 14.4598C1.12385 14.5687 1.23871 14.657 1.36784 14.7194C1.49697 14.7818 1.63759 14.8168 1.7809 14.8223C1.92421 14.8279 2.06712 14.8038 2.20067 14.7516C2.33423 14.6993 2.45555 14.62 2.55705 14.5187L9.85482 8.27475C9.96943 8.17695 10.0615 8.05556 10.1246 7.91875C10.1877 7.78194 10.2203 7.63303 10.2203 7.48237C10.2203 7.33171 10.1877 7.1828 10.1246 7.046C10.0615 6.90919 9.96943 6.78768 9.85482 6.68988L2.55705 0.439901C2.3727 0.276154 2.13624 0.1833 1.88974 0.177498Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="w-full font-nunito font-bold text-[17px] leading-[26px] group">
+                                    <a class="flex items-center justify-between border-b border-white/10 pb-[15px] w-full text-white group-hover:text-International-Orange group-hover:border-International-Orange transition-all ease-linear duration-300"
+                                        href="service.html">
+                                        Marketing Strategy
+                                        <span>
+                                            <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="group-hover:fill-International-Orange transition-all ease-linear duration-300"
+                                                    d="M1.88974 0.177498C1.67328 0.172737 1.46071 0.235487 1.28159 0.357119C1.10247 0.478752 0.965695 0.653256 0.890286 0.856214C0.814877 1.05917 0.804578 1.28055 0.86082 1.48963C0.917063 1.69872 1.03705 1.88499 1.20411 2.02273L7.57821 7.48333L1.20411 12.942C1.08855 13.0269 0.991769 13.1348 0.919832 13.2588C0.847895 13.3829 0.80235 13.5205 0.786049 13.663C0.769747 13.8055 0.783041 13.9498 0.825098 14.0869C0.867154 14.224 0.937067 14.351 1.03046 14.4598C1.12385 14.5687 1.23871 14.657 1.36784 14.7194C1.49697 14.7818 1.63759 14.8168 1.7809 14.8223C1.92421 14.8279 2.06712 14.8038 2.20067 14.7516C2.33423 14.6993 2.45555 14.62 2.55705 14.5187L9.85482 8.27475C9.96943 8.17695 10.0615 8.05556 10.1246 7.91875C10.1877 7.78194 10.2203 7.63303 10.2203 7.48237C10.2203 7.33171 10.1877 7.1828 10.1246 7.046C10.0615 6.90919 9.96943 6.78768 9.85482 6.68988L2.55705 0.439901C2.3727 0.276154 2.13624 0.1833 1.88974 0.177498Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="popular-post bg-texture bg-no-repeat bg-cover bg-center py-[50px] px-8 mb-[30px]">
+                            <h2
+                                class="comment-title font-plus-jakarta-sans font-semibold text-[24px] leading-[55px] text-white relative after:w-[70px] after:h-[3px] after:bg-International-Orange after:rounded-[2px] after:absolute after:bottom-0 after:left-0 mb-11">
+                                Popular Post</h2>
+                            <div class="popular-post-part flex items-start justify-start flex-col gap-7">
+                                <div class="popular-post-item flex items-center justify-start gap-5">
+                                    <div class="w-[110px] h-[110px] rounded-full overflow-hidden flex-[1_0_110px]">
+                                        <img class="w-[110px] h-[110px]"
+                                            src="./assets/images/blog-details/blog-details-10.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div
+                                            class="flex items-center justify-start gap-[34px] font-jost font-normal text-base leading-5 text-white mb-[18px]">
+                                            <span class="flex items-center justify-start gap-2">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M11.875 3.125H11.25V1.875C11.25 1.70924 11.1842 1.55027 11.0669 1.43306C10.9497 1.31585 10.7908 1.25 10.625 1.25C10.4592 1.25 10.3003 1.31585 10.1831 1.43306C10.0658 1.55027 10 1.70924 10 1.875V3.125H5V1.875C5 1.70924 4.93415 1.55027 4.81694 1.43306C4.69973 1.31585 4.54076 1.25 4.375 1.25C4.20924 1.25 4.05027 1.31585 3.93306 1.43306C3.81585 1.55027 3.75 1.70924 3.75 1.875V3.125H3.125C2.62772 3.125 2.15081 3.32254 1.79917 3.67418C1.44754 4.02581 1.25 4.50272 1.25 5V5.625H13.75V5C13.75 4.50272 13.5525 4.02581 13.2008 3.67418C12.8492 3.32254 12.3723 3.125 11.875 3.125Z"
+                                                        fill="#DF3F01" />
+                                                    <path
+                                                        d="M1.25 11.875C1.25 12.3723 1.44754 12.8492 1.79917 13.2008C2.15081 13.5525 2.62772 13.75 3.125 13.75H11.875C12.3723 13.75 12.8492 13.5525 13.2008 13.2008C13.5525 12.8492 13.75 12.3723 13.75 11.875V6.875H1.25V11.875Z"
+                                                        fill="#DF3F01" />
+                                                </svg>
+                                                June 13</span>
+                                            <span class="flex items-center justify-start gap-2">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <mask style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0"
+                                                        y="0" width="20" height="20">
+                                                        <rect width="20" height="20" fill="#D9D9D9" />
+                                                    </mask>
+                                                    <g mask="url(#mask0_486_3121)">
+                                                        <path
+                                                            d="M1.66406 18.3337V3.33366C1.66406 2.87533 1.8274 2.48283 2.15406 2.15616C2.48017 1.83005 2.8724 1.66699 3.33073 1.66699H16.6641C17.1224 1.66699 17.5149 1.83005 17.8416 2.15616C18.1677 2.48283 18.3307 2.87533 18.3307 3.33366V13.3337C18.3307 13.792 18.1677 14.1845 17.8416 14.5112C17.5149 14.8373 17.1224 15.0003 16.6641 15.0003H4.9974L1.66406 18.3337ZM3.33073 14.3128L4.3099 13.3337H16.6641V3.33366H3.33073V14.3128Z"
+                                                            fill="#DF3F01" />
+                                                    </g>
+                                                </svg>
+                                                (05)</span>
+                                        </div>
+                                        <p
+                                            class="font-plus-jakarta-sans font-semibold text-[18px] leading-[28px] text-white">
+                                            This
+                                            Place Really Place For Awesome Moment</p>
+                                    </div>
+                                </div>
+                                <div class="popular-post-item flex items-center justify-start gap-5">
+                                    <div class="w-[110px] h-[110px] rounded-full overflow-hidden flex-[1_0_110px]">
+                                        <img class="w-[110px] h-[110px]"
+                                            src="./assets/images/blog-details/blog-details-11.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div
+                                            class="flex items-center justify-start gap-[34px] font-jost font-normal text-base leading-5 text-white mb-[18px]">
+                                            <span class="flex items-center justify-start gap-2">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M11.875 3.125H11.25V1.875C11.25 1.70924 11.1842 1.55027 11.0669 1.43306C10.9497 1.31585 10.7908 1.25 10.625 1.25C10.4592 1.25 10.3003 1.31585 10.1831 1.43306C10.0658 1.55027 10 1.70924 10 1.875V3.125H5V1.875C5 1.70924 4.93415 1.55027 4.81694 1.43306C4.69973 1.31585 4.54076 1.25 4.375 1.25C4.20924 1.25 4.05027 1.31585 3.93306 1.43306C3.81585 1.55027 3.75 1.70924 3.75 1.875V3.125H3.125C2.62772 3.125 2.15081 3.32254 1.79917 3.67418C1.44754 4.02581 1.25 4.50272 1.25 5V5.625H13.75V5C13.75 4.50272 13.5525 4.02581 13.2008 3.67418C12.8492 3.32254 12.3723 3.125 11.875 3.125Z"
+                                                        fill="#DF3F01" />
+                                                    <path
+                                                        d="M1.25 11.875C1.25 12.3723 1.44754 12.8492 1.79917 13.2008C2.15081 13.5525 2.62772 13.75 3.125 13.75H11.875C12.3723 13.75 12.8492 13.5525 13.2008 13.2008C13.5525 12.8492 13.75 12.3723 13.75 11.875V6.875H1.25V11.875Z"
+                                                        fill="#DF3F01" />
+                                                </svg>
+                                                June 13</span>
+                                            <span class="flex items-center justify-start gap-2">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <mask style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0"
+                                                        y="0" width="20" height="20">
+                                                        <rect width="20" height="20" fill="#D9D9D9" />
+                                                    </mask>
+                                                    <g mask="url(#mask0_486_3121)">
+                                                        <path
+                                                            d="M1.66406 18.3337V3.33366C1.66406 2.87533 1.8274 2.48283 2.15406 2.15616C2.48017 1.83005 2.8724 1.66699 3.33073 1.66699H16.6641C17.1224 1.66699 17.5149 1.83005 17.8416 2.15616C18.1677 2.48283 18.3307 2.87533 18.3307 3.33366V13.3337C18.3307 13.792 18.1677 14.1845 17.8416 14.5112C17.5149 14.8373 17.1224 15.0003 16.6641 15.0003H4.9974L1.66406 18.3337ZM3.33073 14.3128L4.3099 13.3337H16.6641V3.33366H3.33073V14.3128Z"
+                                                            fill="#DF3F01" />
+                                                    </g>
+                                                </svg>
+                                                (05)</span>
+                                        </div>
+                                        <p
+                                            class="font-plus-jakarta-sans font-semibold text-[18px] leading-[28px] text-white">
+                                            This Place Really Place For Awesome Moment</p>
+                                    </div>
+                                </div>
+                                <div class="popular-post-item flex items-center justify-start gap-5">
+                                    <div class="w-[110px] h-[110px] rounded-full overflow-hidden flex-[1_0_110px]">
+                                        <img class="w-[110px] h-[110px]"
+                                            src="./assets/images/blog-details/blog-details-12.png" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div
+                                            class="flex items-center justify-start gap-[34px] font-jost font-normal text-base leading-5 text-white mb-[18px]">
+                                            <span class="flex items-center justify-start gap-2">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M11.875 3.125H11.25V1.875C11.25 1.70924 11.1842 1.55027 11.0669 1.43306C10.9497 1.31585 10.7908 1.25 10.625 1.25C10.4592 1.25 10.3003 1.31585 10.1831 1.43306C10.0658 1.55027 10 1.70924 10 1.875V3.125H5V1.875C5 1.70924 4.93415 1.55027 4.81694 1.43306C4.69973 1.31585 4.54076 1.25 4.375 1.25C4.20924 1.25 4.05027 1.31585 3.93306 1.43306C3.81585 1.55027 3.75 1.70924 3.75 1.875V3.125H3.125C2.62772 3.125 2.15081 3.32254 1.79917 3.67418C1.44754 4.02581 1.25 4.50272 1.25 5V5.625H13.75V5C13.75 4.50272 13.5525 4.02581 13.2008 3.67418C12.8492 3.32254 12.3723 3.125 11.875 3.125Z"
+                                                        fill="#DF3F01" />
+                                                    <path
+                                                        d="M1.25 11.875C1.25 12.3723 1.44754 12.8492 1.79917 13.2008C2.15081 13.5525 2.62772 13.75 3.125 13.75H11.875C12.3723 13.75 12.8492 13.5525 13.2008 13.2008C13.5525 12.8492 13.75 12.3723 13.75 11.875V6.875H1.25V11.875Z"
+                                                        fill="#DF3F01" />
+                                                </svg>
+                                                June 13</span>
+                                            <span class="flex items-center justify-start gap-2">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <mask style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0"
+                                                        y="0" width="20" height="20">
+                                                        <rect width="20" height="20" fill="#D9D9D9" />
+                                                    </mask>
+                                                    <g mask="url(#mask0_486_3121)">
+                                                        <path
+                                                            d="M1.66406 18.3337V3.33366C1.66406 2.87533 1.8274 2.48283 2.15406 2.15616C2.48017 1.83005 2.8724 1.66699 3.33073 1.66699H16.6641C17.1224 1.66699 17.5149 1.83005 17.8416 2.15616C18.1677 2.48283 18.3307 2.87533 18.3307 3.33366V13.3337C18.3307 13.792 18.1677 14.1845 17.8416 14.5112C17.5149 14.8373 17.1224 15.0003 16.6641 15.0003H4.9974L1.66406 18.3337ZM3.33073 14.3128L4.3099 13.3337H16.6641V3.33366H3.33073V14.3128Z"
+                                                            fill="#DF3F01" />
+                                                    </g>
+                                                </svg>
+                                                (05)</span>
+                                        </div>
+                                        <p
+                                            class="font-plus-jakarta-sans font-semibold text-[18px] leading-[28px] text-white">
+                                            This Place Really Place For Awesome Moment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular-tags bg-texture bg-no-repeat bg-cover bg-center py-[21px] px-8">
+                            <h2
+                                class="comment-title font-plus-jakarta-sans font-semibold text-[24px] leading-[55px] text-white relative after:w-[70px] after:h-[3px] after:bg-International-Orange after:rounded-[2px] after:absolute after:bottom-0 after:left-0 mb-11">
+                                Popular Tags</h2>
+                            <ul class="flex items-center justify-start flex-wrap gap-[9px]">
+                                <li>
+                                    <a class="inline-block border border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[15px] leading-[45px] rounded-[3px] px-6 transition-all ease-linear duration-300"
+                                        href="blog-standard.html">Social Media</a>
+                                </li>
+                                <li>
+                                    <a class="inline-block border border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[15px] leading-[45px] rounded-[3px] px-6 transition-all ease-linear duration-300"
+                                        href="blog-standard.html">Digital</a>
+                                </li>
+                                <li>
+                                    <a class="inline-block border border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[15px] leading-[45px] rounded-[3px] px-6 transition-all ease-linear duration-300"
+                                        href="blog-standard.html">Marketing</a>
+                                </li>
+                                <li>
+                                    <a class="inline-block border border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[15px] leading-[45px] rounded-[3px] px-6 transition-all ease-linear duration-300"
+                                        href="blog-standard.html">Social</a>
+                                </li>
+                                <li>
+                                    <a class="inline-block border border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[15px] leading-[45px] rounded-[3px] px-6 transition-all ease-linear duration-300"
+                                        href="blog-standard.html">SEO Services</a>
+                                </li>
+                                <li>
+                                    <a class="inline-block border border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[15px] leading-[45px] rounded-[3px] px-6 transition-all ease-linear duration-300"
+                                        href="blog-standard.html">SEO </a>
+                                </li>
+                                <li>
+                                    <a class="inline-block border border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[15px] leading-[45px] rounded-[3px] px-6 transition-all ease-linear duration-300"
+                                        href="blog-standard.html">Education</a>
+                                </li>
+                                <li>
+                                    <a class="inline-block border border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[15px] leading-[45px] rounded-[3px] px-6 transition-all ease-linear duration-300"
+                                        href="blog-standard.html">America</a>
+                                </li>
+                                <li>
+                                    <a class="inline-block border border-International-Orange hover:bg-International-Orange text-white font-Poppins font-medium text-[15px] leading-[45px] rounded-[3px] px-6 transition-all ease-linear duration-300"
+                                        href="blog-standard.html">Analysis</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- blog details -->
+
+    <!-- news-blog -->
+    <div class="news-blog bg-texture bg-no-repeat bg-cover bg-center overflow-x-hidden fade-in">
+        <div class="grid grid-cols-12 overflow-hidden">
+            <!-- food image slider -->
+            <div class="col-span-12">
+                <div class="swiper-container marquee-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s"
+                            data-wow-delay=".3s">
+                            <img src="./assets/images/food-slider-item-1.png" alt="">
+                        </div>
+                        <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s"
+                            data-wow-delay=".5s">
+                            <img src="./assets/images/food-slider-item-2.png" alt="">
+                        </div>
+                        <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s"
+                            data-wow-delay="1s">
+                            <img src="./assets/images/food-slider-item-3.png" alt="">
+                        </div>
+                        <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s"
+                            data-wow-delay="1.3s">
+                            <img src="./assets/images/food-slider-item-4.png" alt="">
+                        </div>
+                        <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s"
+                            data-wow-delay="1.5s">
+                            <img src="./assets/images/food-slider-item-5.png" alt="">
+                        </div>
+                        <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s"
+                            data-wow-delay="1.8s">
+                            <img src="./assets/images/food-slider-item-6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- news-blog -->
+
+    <!-- footer -->
+    <div class="footer bg-texture bg-cover bg-center overflow-x-hidden fade-in">
+        <div class="container">
+            <div class="grid grid-cols-12 gap-4 border-b border-white/10">
+                <div class="col-span-6 md:col-span-3">
+                    <h4
+                        class="pt-10 md:pt-[100px] font-plus-jakarta-sans font-semibold text-[18px] leading-[22px] text-white mb-[35px]">
+                        Resources
+                    </h4>
+                    <ul class="pb-10 md:pb-[110px] flex items-start justify-start flex-col gap-7">
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange transition-all ease-linear duration-300"
+                                href="our-menu.html">Potato</a>
+                        </li>
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange transition-all ease-linear duration-300"
+                                href="our-menu.html">Organic Juice</a>
+                        </li>
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange transition-all ease-linear duration-300"
+                                href="our-menu.html">Lemon Juice</a>
+                        </li>
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange transition-all ease-linear duration-300"
+                                href="our-menu.html">MuTton Tikka</a>
+                        </li>
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange transition-all ease-linear duration-300"
+                                href="our-menu.html">Seafoods</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-6 md:col-span-3">
+                    <h4
+                        class="pt-10 md:pt-[100px] font-plus-jakarta-sans font-semibold text-[18px] leading-[22px] text-white mb-[35px]">
+                        Quick Link
+                    </h4>
+                    <ul class="pb-10 md:pb-[110px] flex items-start justify-start flex-col gap-7">
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange hover:underline transition-all ease-linear duration-300"
+                                href="reservation.html">Fast Delivery</a>
+                        </li>
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange hover:underline transition-all ease-linear duration-300"
+                                href="shop-details.html">Vegan Cuisine</a>
+                        </li>
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange hover:underline transition-all ease-linear duration-300"
+                                href="shop-pages.html">Fresh Products</a>
+                        </li>
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange hover:underline transition-all ease-linear duration-300"
+                                href="meet-the-chef.html">Skilled Chefs</a>
+                        </li>
+                        <li>
+                            <a class="font-jost font-normal text-base leading-10 text-white hover:text-International-Orange hover:underline transition-all ease-linear duration-300"
+                                href="shop-details.html">Great Coffee</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-12 md:col-span-6 md:border-l border-white/10">
+                    <div class="md:pl-[80px] xl:pl-[124px] md:pt-[100px] pb-[110px]">
+                        <h1 class="font-plus-jakarta-sans font-semibold text-white footer-title">
+                            We’re Now
+                            Available On <br>
+                            Store Download Our Apps</h1>
+                        <p class="footer-desc font-jost font-normal text-white">No credit card
+                            requirement
+                            it’s full free for all</p>
+                        <ul class="flex items-center justify-start gap-x-2 lg:gap-x-4 xl:gap-x-[25px]">
+                            <li>
+                                <a class="footer-store flex items-center justify-center gap-[10px] border-[2px] border-white/10 rounded-[6px]  font-Work-Sans font-semibold  text-white hover:bg-International-Orange transition-all ease-linear duration-300 hover:border-International-Orange"
+                                    href="#">Play Store
+                                    <span><svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.88672 7.17578L10.5273 5.53516L2.84375 1.10547L8.88672 7.17578ZM1.28516 0.75L8.28516 7.75L1.28516 14.75C0.929687 14.5859 0.683594 14.2305 0.683594 13.793L0.683594 1.73438C0.683594 1.29688 0.929688 0.941406 1.28516 0.75ZM12.9062 6.92969C13.4258 7.3125 13.4258 8.21484 12.9336 8.59766L11.293 9.52734L9.48828 7.75L11.293 6L12.9062 6.92969ZM2.84375 14.3945L8.88672 8.35156L10.5273 9.99219L2.84375 14.3945Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span></a>
+                            </li>
+                            <li>
+                                <a class="footer-store flex items-center justify-center gap-[10px] border-[2px] border-white/10 rounded-[6px] font-Work-Sans font-semibold text-white hover:bg-International-Orange transition-all ease-linear duration-300 hover:border-International-Orange"
+                                    href="#">Apple Store
+                                    <span>
+                                        <svg width="11" height="13" viewBox="0 0 11 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.69531 7.10547C8.69531 7.16016 8.61328 8.77344 10.3906 9.62109C10.0625 10.6328 8.91406 12.875 7.57422 12.875C6.80859 12.875 6.37109 12.3828 5.49609 12.3828C4.59375 12.3828 4.10156 12.875 3.41797 12.875C2.10547 12.9297 0.847656 10.4688 0.492187 9.45703C0.21875 8.69141 0.109375 7.95312 0.109375 7.24219C0.109375 4.80859 1.72266 3.63281 3.25391 3.60547C3.99219 3.60547 4.92188 4.125 5.33203 4.125C5.71484 4.125 6.78125 3.49609 7.76562 3.57813C8.77734 3.66016 9.54297 4.04297 10.0625 4.78125C9.16016 5.35547 8.69531 6.09375 8.69531 7.10547ZM7.16406 2.62109C6.61719 3.25 5.96094 3.60547 5.25 3.55078C5.19531 2.8125 5.46875 2.12891 5.96094 1.58203C6.39844 1.08984 7.16406 0.679688 7.82031 0.625C7.82031 0.925781 7.90234 1.74609 7.16406 2.62109Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- tiny footer -->
+            <div class="grid grid-cols-12 gap-4 items-center py-[27px]">
+                <div class="col-span-12 md:col-span-6">
+                    <div class="logo max-w-[215px] min-w-[215px] w-full mx-auto lg:ml-0">
+                        <img class="h-8 mx-auto lg:ml-0" src="./assets/images/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 text-right">
+                    <p
+                        class="font-jost font-normal lg:text-[14px] xl:text-[18px] leading-[26px] text-white text-center lg:text-right">
+                        &copy;
+                        <span id="year"></span> <a href="https://themeforest.net/user/website_stock">website_stock</a>
+                        .
+                        All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+            <!-- tiny footer -->
+        </div>
+    </div>
+    <!-- footer -->
+
+    <!-- progress area start -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="
+        transition: stroke-dashoffset 10ms linear 0s;
+        stroke-dasharray: 307.919, 307.919;
+        stroke-dashoffset: 307.919;
+      "></path>
+        </svg>
+    </div>
+    <!-- progress area end -->
+
+    <!-- pre loader start -->
+    <div class="loader-wrapper">
+        <div class="loader">
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- pre loader end -->
+
+    <!-- js -->
+
+    <!-- jquery js -->
+    <script defer src="./assets/js/jquery.min.js"></script>
+
+    <!-- jquery-ui js -->
+    <script defer src="./assets/js/jquery-ui.min.js"></script>
+
+    <!-- flowbite js -->
+    <script defer src="./assets/js/flowbite.min.js"></script>
+
+    <!-- alpine js -->
+    <script defer src="./assets/js/alpine.js"></script>
+
+    <!-- swiper js -->
+    <script defer src="./assets/js/swiper.js"></script>
+
+    <!-- gsap js -->
+    <script defer src="./assets/js/gsap.min.js"></script>
+
+    <!-- split-text js -->
+    <script defer src="./assets/js/split-text.js"></script>
+
+    <!-- split-text js -->
+    <script defer src="./assets/js/scrolltigger.js"></script>
+
+    <!-- ScrollSmoother js -->
+    <script defer src="./assets/js/ScrollSmoother.min.js"></script>
+
+    <!-- split-type js -->
+    <script defer src="./assets/js/split-type.js"></script>
+
+    <!-- waw js -->
+    <script defer src="./assets/js/wow.js"></script>
+
+    <!-- counter-up js -->
+    <script defer src="./assets/js/counter-up.js"></script>
+
+    <!-- metismenu js -->
+    <script defer src="./assets/js/metismenu.js"></script>
+
+    <!-- metismenu js -->
+    <script defer src="./assets/js/magnific-popup.js"></script>
+
+    <!-- metismenu js -->
+    <script defer src="./assets/js/waypoint.js"></script>
+
+    <!-- swiper js -->
+    <script defer src="./assets/js/main.js"></script>
+
+
+</body>
+
+</html>

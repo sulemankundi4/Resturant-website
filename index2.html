@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restfast</title>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- flag-icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" />
+
+    <!-- animate css -->
+    <link rel="stylesheet" href="./assets/css/animate.min.css" />
+    <!-- swiper css -->
+    <link rel="stylesheet" href="./assets/css/flowbite.min.css" />
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
+
+    <!-- magnific-popup css -->
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
+
+    <!-- jquery-ui css -->
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css" />
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body class="bg-Deep-Teal relative">
+    <!-- header -->
+    <div class="header w-full pt-6 z-20 header--sticky relative">
+      <div class="max-w-[1624px] px-3 mx-auto">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12">
+            <nav>
+              <div class="flex items-center justify-between">
+                <div class="flex flex-1 w-full items-center justify-between">
+                  <a href="index.html" class="w-full md:max-w-[200px] lg:max-w-[215px]">
+                    <img src="./assets/images/logo.png" class="h-8" alt="Logo" />
+                  </a>
+                  <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2" aria-controls="navbar-dropdown" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="hidden w-full md:block md:w-auto absolute md:relative left-0 top-full bg-Deep-Teal md:bg-transparent" id="navbar-dropdown">
+                  <ul class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">
+                    <li @click.away="open = false" class="relative" x-data="{ open: false }">
+                      <button type="button" @click="open = !open" class="flex flex-row items-center w-full md:w-auto md:inline-flex">
+                        <span>Home</span>
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 ml-1 transition-transform duration-200 transform">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                      </button>
+                      <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-max mt-2 origin-top-right bg-Deep-Teal z-[1]">
+                        <ul aria-labelledby="dropdownLargeButton">
+                          <li>
+                            <a href="index.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Home - 1</a>
+                          </li>
+                          <li>
+                            <a href="index2.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Home - 2</a>
+                          </li>
+                          <li>
+                            <a href="index3.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Home - 3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li class="mx-0">
+                      <a href="about-us.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">About Us</a>
+                    </li>
+                    <li @click.away="open = false" class="relative" x-data="{ open: false }">
+                      <button type="button" @click="open = !open" class="flex flex-row items-center w-full md:w-auto md:inline-flex">
+                        Pages
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 ml-1 transition-transform duration-200 transform">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                      </button>
+                      <!-- Dropdown menu -->
+                      <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-max mt-2 origin-top-right bg-Deep-Teal z-[1]">
+                        <ul aria-labelledby="dropdownLargeButton">
+                          <li>
+                            <a href="about-us.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">About Us</a>
+                          </li>
+                          <li>
+                            <a href="our-menu.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Our Menu</a>
+                          </li>
+                          <li>
+                            <a href="reservation.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Reservation</a>
+                          </li>
+                          <li>
+                            <a href="meet-the-chef.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Meet The Chef</a>
+                          </li>
+                          <li>
+                            <a href="the-chef-single.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">The Chef Single</a>
+                          </li>
+                          <li>
+                            <a href="shop-pages.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop Pages</a>
+                          </li>
+                          <li>
+                            <a href="shop-details.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop Details</a>
+                          </li>
+                          <li>
+                            <a href="faq.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Faq</a>
+                          </li>
+                          <li>
+                            <a href="blog-grid.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Blog Grid</a>
+                          </li>
+                          <li>
+                            <a href="blog-standard.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Blog Standard</a>
+                          </li>
+                          <li>
+                            <a href="blog-details.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Blog Details</a>
+                          </li>
+                          <li>
+                            <a href="contact-us.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Contact Us</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li @click.away="open = false" class="relative" x-data="{ open: false }">
+                      <button type="button" @click="open = !open" class="flex flex-row items-center w-full md:w-auto md:inline-flex">
+                        Shop
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 ml-1 transition-transform duration-200 transform">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                      </button>
+                      <!-- Dropdown menu -->
+                      <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-max mt-2 origin-top-right bg-Deep-Teal z-[1]">
+                        <ul aria-labelledby="dropdownLargeButton">
+                          <li>
+                            <a href="shop-pages.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop Pages</a>
+                          </li>
+                          <li>
+                            <a href="shop-details.html" class="block text-white hover:text-Deep-Teal hover:bg-white py-2 px-3">Shop Details</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="blog-standard.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">Blog</a>
+                    </li>
+                    <li>
+                      <a href="contact-us.html" class="flex flex-col items-center py-2 md:flex-row md:mt-0 md:text-sm md:border-0 gap-y-2 md:gap-x-[20px] lg:gap-x-[20px] xl:gap-x-[57px] font-jost font-normal leading-[26px] text-[18px] text-white">Contacts</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="openAuthModal()" class="flex flex-row items-center w-full md:w-auto md:inline-flex">
+                        <span class="md:w-[25px] lg:w-[41px] md:h-[25px] lg:h-[41px] p-1 rounded-full border flex items-center justify-center">
+                          <svg class="md:w-[12px] lg:w-[14px] md:h-[12px] lg:h-[14px]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8223 11.873C13.0508 12.127 13.0508 12.5078 12.7969 12.7363L12.0859 13.4473C11.8574 13.7012 11.4766 13.7012 11.2227 13.4473L8.70898 10.9336C8.58203 10.8066 8.53125 10.6543 8.53125 10.502V10.0703C7.61719 10.7812 6.5 11.1875 5.28125 11.1875C2.36133 11.1875 0 8.82617 0 5.90625C0 3.01172 2.36133 0.625 5.28125 0.625C8.17578 0.625 10.5625 3.01172 10.5625 5.90625C10.5625 7.15039 10.1309 8.26758 9.44531 9.15625H9.85156C10.0039 9.15625 10.1562 9.23242 10.2832 9.33398L12.8223 11.873ZM5.28125 9.15625C7.05859 9.15625 8.53125 7.70898 8.53125 5.90625C8.53125 4.12891 7.05859 2.65625 5.28125 2.65625C3.47852 2.65625 2.03125 4.12891 2.03125 5.90625C2.03125 7.70898 3.47852 9.15625 5.28125 9.15625Z" fill="white" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="reservation.html" class="btn inline-flex items-center justify-center gap-x-[7px] font-jost font-normal leading-[56px] text-[14px] md:text-[16px] text-white bg-Bright-Orange px-[12px] lg:px-[41px] rounded-md">
+                        <span class="btn__ink"></span>
+                        <div class="btn__inner">Book Now</div>
+                        <span>
+                          <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.23096 5.78125L1.66846 10.4062C1.51221 10.5625 1.26221 10.5625 1.13721 10.4062L0.512207 9.78125C0.355957 9.625 0.355957 9.40625 0.512207 9.25L4.19971 5.5L0.512207 1.78125C0.355957 1.625 0.355957 1.375 0.512207 1.25L1.13721 0.625C1.26221 0.46875 1.51221 0.46875 1.66846 0.625L6.23096 5.25C6.38721 5.40625 6.38721 5.625 6.23096 5.78125Z" fill="white" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative z-30">
+      <div id="authOverlay" class="auth-overlay fixed z-10 left-0 top-0 h-full w-full flex items-center justify-center py-3 px-2 overflow-y-auto bg-white/80 backdrop-blur-sm scale-y-0 -translate-x-full opacity-0 origin-center">
+        <div id="fourth" class="bg-white/0 max-w-sm m-auto mb-0 sm:mb-auto p-3 border border-white/0 rounded-2xl shadow-sm">
+          <div id="second" class="bg-white p-4 sm:p-8 w-full rounded-xl shadow-sm scale-y-0 opacity-0">
+            <div id="third" class="relative scale-y-0 opacity-0">
+              <div class="input-group mb-3">
+                <input type="search" class="form-control" placeholder="Search" aria-label="Search..." aria-describedby="button-addon2" />
+                <button class="btn" type="button" id="button-addon2">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+              <div class="text-center">
+                <button onclick="closeAuthModal()" class="bg-neutral-100 text-neutral-400 font-semibold text-xl rounded-md border-b-[3px] px-3 py-1">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+
+    <!-- banner -->
+    <div class="banner mt-7 overflow-hidden">
+      <div class="max-w-[1612px] mx-auto">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12">
+            <div class="banner-slider-item relative">
+              <div class="pl-[50px] md:pl-[80px] lg:pl-[152px] relative z-10 py-[70px] md:py-[150px] lg:pt-[256px] lg:pb-[260px]">
+                <p class="font-satisfy font-normal text-[14px] md:text-[18px] xl:text-[24px] lg:text-[20px] xl:leading-[32px] lg:leading-[25px] text-Bright-Orange mb-[25px] wow bounceInUp" data-wow-duration="2s" data-wow-delay=".5s">Daily fresh and always tasty</p>
+                <h1 before="Cheesy Pizza Drawing" class="skew-up max-w-[200px] md:max-w-[400px] lg:max-w-[600px] font-plus-jakarta-sans font-bold text-[20px] sm:text-[40px] md:text-[50px] lg:text-[90px] xl:leading-[145px] lg:leading-[65px] text-white mb-[30px] xl:mb-[88px] lg:mb-[40px] relative before:content-[attr(before)] before:absolute md:before:top-[3px] lg:before:top-[5px] md:before:left-[-5px] lg:before:left-[-7px] before:text-transparent before:text-stroke-2 before:z-[-1]">
+                  Cheesy Pizza <br />
+                  Drawing
+                </h1>
+                <div class="flex items-center justify-start gap-x-2 md:gap-x-[27px]">
+                  <a href="shop-details.html" class="btn inline-flex items-center justify-center gap-[7px] bg-Bright-Orange px-[12px] md:px-[41px] rounded-md font-jost font-medium md:font-semibold text-[12px] md:text-[16px] xl:text-[18px] lg:text-[16px] leading-[38px] xl:leading-[58px] lg:leading-[45px] text-white">
+                    <span class="btn__ink"></span>
+                    <div class="btn__inner">Read More</div>
+                    <span>
+                      <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.23096 5.78125L1.66846 10.4062C1.51221 10.5625 1.26221 10.5625 1.13721 10.4062L0.512207 9.78125C0.355957 9.625 0.355957 9.40625 0.512207 9.25L4.19971 5.5L0.512207 1.78125C0.355957 1.625 0.355957 1.375 0.512207 1.25L1.13721 0.625C1.26221 0.46875 1.51221 0.46875 1.66846 0.625L6.23096 5.25C6.38721 5.40625 6.38721 5.625 6.23096 5.78125Z" fill="white" />
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="flex items-center gap-1 md:gap-[18px]">
+                    <div class="icon">
+                      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="23" fill="#FB9015" />
+                        <g clip-path="url(#clip0_1034_8236)">
+                          <path d="M17.5942 21.0885C15.6794 21.0885 14.1217 22.6463 14.1217 24.5611C14.1217 26.4758 15.6794 28.0336 17.5942 28.0336C19.509 28.0336 21.0667 26.4758 21.0667 24.5611C21.0667 22.6463 19.509 21.0885 17.5942 21.0885ZM17.5942 26.5737C16.4845 26.5737 15.5818 25.6707 15.5818 24.5611C15.5818 23.4514 16.4845 22.5484 17.5942 22.5484C18.7039 22.5484 19.6069 23.4514 19.6069 24.5611C19.6069 25.6707 18.7039 26.5737 17.5942 26.5737Z" fill="white" />
+                          <path d="M29.3229 21.0885C27.4081 21.0885 25.8502 22.6463 25.8502 24.5611C25.8502 26.4758 27.4081 28.0336 29.3229 28.0336C31.2375 28.0336 32.7954 26.4758 32.7954 24.5611C32.7954 22.6463 31.2377 21.0885 29.3229 21.0885ZM29.3229 26.5737C28.213 26.5737 27.3103 25.6707 27.3103 24.5611C27.3103 23.4514 28.213 22.5484 29.3229 22.5484C30.4326 22.5484 31.3354 23.4514 31.3354 24.5611C31.3354 25.6707 30.4326 26.5737 29.3229 26.5737Z" fill="white" />
+                          <path d="M36 17.9668H30.4096C28.7464 16.3513 26.1764 15.3945 23.4586 15.3945C20.8516 15.3945 18.2224 16.3741 16.5107 17.9668H11.0462L12.5352 20.3363C11.5775 21.4813 11 22.9549 11 24.5611C11 28.1972 13.9583 31.1553 17.5943 31.1553C19.474 31.1553 21.1723 30.3647 22.3745 29.0988L23.4586 31.6007L24.5426 29.0988C25.7449 30.3649 27.4433 31.1553 29.3229 31.1553C32.9589 31.1553 35.9172 28.1972 35.9172 24.5611C35.9172 22.9963 35.3689 21.5574 34.4549 20.4254L36 17.9668ZM28.1516 18.0709C26.1049 18.4394 24.3831 19.7557 23.4586 21.5474C22.5404 19.7681 20.836 18.4579 18.8079 18.0791C20.145 17.3042 21.8023 16.8544 23.4586 16.8544C25.193 16.8544 26.8449 17.2941 28.1516 18.0709ZM17.5943 29.6954C14.7632 29.6954 12.4601 27.3921 12.4601 24.5611C12.4601 21.73 14.7632 19.4269 17.5943 19.4269C20.4254 19.4269 22.7285 21.73 22.7285 24.5611C22.7285 27.3921 20.4254 29.6954 17.5943 29.6954ZM29.3229 29.6954C26.4919 29.6954 24.1886 27.3921 24.1886 24.5611C24.1886 21.73 26.4919 19.4269 29.3229 19.4269C32.1538 19.4269 34.4571 21.73 34.4571 24.5611C34.4571 27.3921 32.154 29.6954 29.3229 29.6954Z" fill="white" />
+                          <path d="M17.5943 23.7956C17.1722 23.7956 16.8289 24.139 16.8289 24.5611C16.8289 24.983 17.1722 25.3263 17.5943 25.3263C18.0164 25.3263 18.3597 24.983 18.3597 24.5611C18.3597 24.139 18.0164 23.7956 17.5943 23.7956Z" fill="white" />
+                          <path d="M29.3575 23.7956C28.9354 23.7956 28.592 24.139 28.592 24.5611C28.592 24.983 28.9354 25.3263 29.3575 25.3263C29.7796 25.3263 30.1229 24.983 30.1229 24.5611C30.1229 24.139 29.7796 23.7956 29.3575 23.7956Z" fill="white" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1034_8236">
+                            <rect width="25" height="25" fill="white" transform="translate(11 11)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="content flex items-start justify-start flex-col gap-[.1rem] lg:gap-2">
+                      <p class="font-jost font-medium text-[14px] md:text-[18px] leading-[26px] text-white p-0 m-0">Tripadvisor</p>
+                      <span class="flex items-center gap-1 font-jost font-normal text-[10px] md:text-[13px] leading-[18px] text-white p-0 m-0">
+                        <span>4.5</span>
+                        <span>Trust Rating</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img class="w-full h-full absolute top-0 left-0" src="./assets/pictures/hero_area.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- banner -->
+
+    <!-- italian pizza -->
+    <div class="italian-pizza py-[70px] md:pt-[140px] relative fade-in overflow-hidden">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-4 md:gap-x-5 lg:gap-x-[94px]">
+          <div class="img-1 absolute top-0 right-0 -z-10">
+            <img src="./assets/pictures/pizza.png" alt="" />
+          </div>
+          <div class="img-2 absolute -bottom-[16rem] left-0">
+            <img src="./assets/images/home-2/burger.png" alt="" />
+          </div>
+          <div class="col-span-12 lg:col-span-4">
+            <div class="img max-h-[550px] h-full w-full wow overlay-anim zoom-effect overflow-hidden" data-wow-duration="2s" data-wow-delay="1s">
+              <img class="h-full w-full" src="./assets/pictures/italian-pizza.png" alt="" />
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-8">
+            <h2 class="section-subtitle subtitle font-satisfy font-normal text-Bright-Orange flex items-center justify-start gap-[15px] mb-[19px]">
+              <span>
+                <svg width="13" height="30" viewBox="0 0 13 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.02392 28.6457L7.97935 17.6722C9.169 17.5219 10.2426 17.1711 11.1421 16.6701C12.3607 15.9518 13.0281 15.0165 12.9991 14.0144L12.9701 11.2919L12.4768 0.418535C12.4478 0.201403 12.1286 0.000973324 11.7224 0.000973324C11.2872 -0.0157292 10.939 0.184701 10.91 0.435238L10.5908 10.5903L7.66018 10.6071L7.25396 0.435238C7.22494 0.201404 6.87675 0.000973324 6.47053 0.000973324C6.00628 -0.0157292 5.62907 0.184701 5.62907 0.451941L5.3099 10.6071L2.3793 10.6238L1.94406 0.451941C1.91504 0.234808 1.59587 0.0343784 1.18965 0.0343784C0.754411 0.0176759 0.40622 0.218106 0.377205 0.468643L0 11.3253L0.0290154 14.0645C0.0290154 15.8349 2.23422 17.3215 5.1358 17.6889L4.43942 28.6624C4.43942 28.6847 4.43942 28.707 4.43942 28.7292C4.49745 29.4475 5.54202 30.032 6.81872 29.9986C8.0664 29.9819 9.08195 29.3639 9.02392 28.6457Z" fill="#FB9015" />
+                </svg>
+              </span>
+              ITALIAN PIZZA
+            </h2>
+            <h1 class="title font-plus-jakarta-sans font-semibold text-white mb-[57px] split-collab">
+              Our Pizzeria and Enjoy The <br />
+              Ultimate Pizza
+            </h1>
+            <div class="img wow overlay-anim zoom-effect overflow-hidden" data-wow-duration="2s" data-wow-delay="2s">
+              <img class="w-full h-full" src="./assets/pictures/italian-pizza-2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- italian pizza -->
+
+    <!-- fresh-pizzion -->
+    <div class="fresh-pizzion pt-[140px] pb-[160px] relative fade-in overflow-hidden">
+      <div class="container">
+        <div class="grid grid-cols-12 lg:gap-x-[94px]">
+          <div class="img-1 absolute bottom-[-16rem] right-0 -z-[1]">
+            <img src="./assets/pictures/pizza.png" alt="" />
+          </div>
+          <div class="col-span-12 text-center">
+            <h2 class="subtitle font-satisfy font-normal text-Bright-Orange flex items-center justify-center gap-[15px] mb-[19px]">
+              <span>
+                <svg width="13" height="30" viewBox="0 0 13 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.02392 28.6457L7.97935 17.6722C9.169 17.5219 10.2426 17.1711 11.1421 16.6701C12.3607 15.9518 13.0281 15.0165 12.9991 14.0144L12.9701 11.2919L12.4768 0.418535C12.4478 0.201403 12.1286 0.000973324 11.7224 0.000973324C11.2872 -0.0157292 10.939 0.184701 10.91 0.435238L10.5908 10.5903L7.66018 10.6071L7.25396 0.435238C7.22494 0.201404 6.87675 0.000973324 6.47053 0.000973324C6.00628 -0.0157292 5.62907 0.184701 5.62907 0.451941L5.3099 10.6071L2.3793 10.6238L1.94406 0.451941C1.91504 0.234808 1.59587 0.0343784 1.18965 0.0343784C0.754411 0.0176759 0.40622 0.218106 0.377205 0.468643L0 11.3253L0.0290154 14.0645C0.0290154 15.8349 2.23422 17.3215 5.1358 17.6889L4.43942 28.6624C4.43942 28.6847 4.43942 28.707 4.43942 28.7292C4.49745 29.4475 5.54202 30.032 6.81872 29.9986C8.0664 29.9819 9.08195 29.3639 9.02392 28.6457Z" fill="#FB9015" />
+                </svg>
+              </span>
+              Fresh From Pizzon
+            </h2>
+            <h1 class="font-plus-jakarta-sans font-semibold text-white mb-[57px] title skew-up">Our Delicious Pizzas</h1>
+          </div>
+          <div class="col-span-12 lg:col-span-4 text-center mb-[124px] lg:mb-0">
+            <div class="img w-[278px] h-[279px] mb-[15px] mx-auto relative wow overlay-anim zoom-effect overflow-hidden" data-wow-duration="2s" data-wow-delay="1s">
+              <img class="w-full h-full" src="./assets/pictures/pizzon-1.png" alt="" />
+            </div>
+            <h4 class="font-plus-jakarta-sans the-best-food-title text-white mb-[15px]">Half And Half Pizza</h4>
+            <p class="font-jost font-normal the-best-food-desc text-white mb-[10px]">Integer vitae enim vel nisi feugiat ultricies. Phasellus hendrerit pharetra posuere...</p>
+            <span class="font-jost font-normal the-best-food-title text-white mb-5 block">$55.00</span>
+            <a class="btn border border-Bright-Orange inline-flex items-center justify-center gap-[7px] font-jost font-semibold the-best-food-desc leading-[50px] text-Bright-Orange px-[31px] rounded-[6px]" href="shop-details.html">
+              <span class="btn__ink"></span>
+              <div class="btn__inner">Select Options</div>
+              <span>
+                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.34375 5.78125L1.78125 10.4062C1.625 10.5625 1.375 10.5625 1.25 10.4062L0.625 9.78125C0.46875 9.625 0.46875 9.40625 0.625 9.25L4.3125 5.5L0.625 1.78125C0.46875 1.625 0.46875 1.375 0.625 1.25L1.25 0.625C1.375 0.46875 1.625 0.46875 1.78125 0.625L6.34375 5.25C6.5 5.40625 6.5 5.625 6.34375 5.78125Z" fill="#FB9015" />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="col-span-12 lg:col-span-4 text-center mb-[124px] lg:mb-0">
+            <div class="img w-[278px] h-[279px] mb-[15px] mx-auto relative wow overlay-anim zoom-effect overflow-hidden" data-wow-duration="2s" data-wow-delay="2s">
+              <img class="w-full h-full" src="./assets/pictures/pizzon-2.png" alt="" />
+            </div>
+            <h4 class="font-plus-jakarta-sans font-semibold the-best-food-title text-white mb-[15px]">Chicken Sausage Pizza</h4>
+            <p class="font-jost font-normal the-best-food-desc text-white mb-[10px]">Integer vitae enim vel nisi feugiat ultricies. Phasellus hendrerit pharetra posuere...</p>
+            <span class="font-jost font-normal the-best-food-title text-white mb-5 block">$99.00</span>
+            <a class="btn border border-Bright-Orange inline-flex items-center justify-center gap-[7px] font-jost font-semibold the-best-food-desc leading-[50px] text-Bright-Orange px-[31px] rounded-[6px]" href="shop-details.html"
+              ><span class="btn__ink"></span>
+              <div class="btn__inner">Select Options</div>
+              <span>
+                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.34375 5.78125L1.78125 10.4062C1.625 10.5625 1.375 10.5625 1.25 10.4062L0.625 9.78125C0.46875 9.625 0.46875 9.40625 0.625 9.25L4.3125 5.5L0.625 1.78125C0.46875 1.625 0.46875 1.375 0.625 1.25L1.25 0.625C1.375 0.46875 1.625 0.46875 1.78125 0.625L6.34375 5.25C6.5 5.40625 6.5 5.625 6.34375 5.78125Z" fill="#FB9015" />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="col-span-12 lg:col-span-4 text-center">
+            <div class="img w-[278px] h-[279px] mb-[15px] mx-auto relative wow overlay-anim zoom-effect overflow-hidden" data-wow-duration="2s" data-wow-delay="3s">
+              <img class="w-full h-full" src="./assets/pictures/pizzon-3.png" alt="" />
+            </div>
+            <h4 class="font-plus-jakarta-sans font-semibold the-best-food-title text-white mb-[15px]">Glute-Free Pizza</h4>
+            <p class="font-jost font-normal the-best-food-desc text-white mb-[10px]">Integer vitae enim vel nisi feugiat ultricies. Phasellus hendrerit pharetra posuere...</p>
+            <span class="font-jost font-normal the-best-food-title text-white mb-5 block">$73.00</span>
+            <a class="btn border border-Bright-Orange inline-flex items-center justify-center gap-[7px] font-jost font-semibold the-best-food-desc leading-[50px] text-Bright-Orange px-[31px] rounded-[6px]" href="shop-details.html"
+              ><span class="btn__ink"></span>
+              <div class="btn__inner">Select Options</div>
+              <span>
+                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.34375 5.78125L1.78125 10.4062C1.625 10.5625 1.375 10.5625 1.25 10.4062L0.625 9.78125C0.46875 9.625 0.46875 9.40625 0.625 9.25L4.3125 5.5L0.625 1.78125C0.46875 1.625 0.46875 1.375 0.625 1.25L1.25 0.625C1.375 0.46875 1.625 0.46875 1.78125 0.625L6.34375 5.25C6.5 5.40625 6.5 5.625 6.34375 5.78125Z" fill="#FB9015" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fresh-pizzion -->
+
+    <!-- fastest delivery -->
+    <div class="fastest-delivery mt-7 relative fade-in overflow-hidden">
+      <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-12">
+          <div class="banner-slider-item relative">
+            <div class="px-4 md:pl-[100px] lg:pl-[324px] py-5 md:py-[60px] lg:py-[122px]">
+              <p class="subtitle font-satisfy font-normal text-Bright-Orange mb-2 md:mb-[20px] flex items-center justify-start gap-[15px]">
+                <span>
+                  <svg width="13" height="30" viewBox="0 0 13 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.02392 28.6457L7.97935 17.6722C9.169 17.5219 10.2426 17.1711 11.1421 16.6701C12.3607 15.9518 13.0281 15.0165 12.9991 14.0144L12.9701 11.2919L12.4768 0.418535C12.4478 0.201403 12.1286 0.000973324 11.7224 0.000973324C11.2872 -0.0157292 10.939 0.184701 10.91 0.435238L10.5908 10.5903L7.66018 10.6071L7.25396 0.435238C7.22494 0.201404 6.87675 0.000973324 6.47053 0.000973324C6.00628 -0.0157292 5.62907 0.184701 5.62907 0.451941L5.3099 10.6071L2.3793 10.6238L1.94406 0.451941C1.91504 0.234808 1.59587 0.0343784 1.18965 0.0343784C0.754411 0.0176759 0.40622 0.218106 0.377205 0.468643L0 11.3253L0.0290154 14.0645C0.0290154 15.8349 2.23422 17.3215 5.1358 17.6889L4.43942 28.6624C4.43942 28.6847 4.43942 28.707 4.43942 28.7292C4.49745 29.4475 5.54202 30.032 6.81872 29.9986C8.0664 29.9819 9.08195 29.3639 9.02392 28.6457Z" fill="#FB9015" />
+                  </svg>
+                </span>
+                Fastest Delivery
+              </p>
+              <h1 class="title font-plus-jakarta-sans font-semibold text-white mb-5 md:mb-10 split-collab">
+                Your Favorite Pizza On The <br />
+                Way Of The World
+              </h1>
+              <p class="font-jost font-normal text-sm md:text-base leading-[23px] text-white mb-5 md:mb-10">
+                From signature delights such as beef tartare and the best mashed
+                <br class="hidden md:block" />
+                potato in Paris, all the way to unique specialities.
+              </p>
+              <div class="flex items-center justify-start gap-[27px]">
+                <div class="flex items-start md:items-center flex-col md:flex-row gap-[18px] group">
+                  <div class="icon">
+                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" fill-rule="evenodd" clip-rule="evenodd" d="M11.1746 8.59375H43.8254L48.125 20.3198V24.0625C48.125 25.7849 47.4781 27.3774 46.4062 28.5695V48.125H8.59375V28.5695C7.52203 27.3774 6.875 25.7849 6.875 24.0625V20.3198L11.1746 8.59375ZM41.6797 30.6921C42.1224 30.6921 42.5535 30.6467 42.9688 30.5605V44.6875H34.375V34.375H20.625V44.6875H12.0312V30.5605C12.4465 30.6467 12.8775 30.6921 13.3203 30.6921C15.2082 30.6921 16.8795 29.8682 18.0469 28.5695C19.2143 29.8682 20.8856 30.6921 22.7734 30.6921C24.6613 30.6921 26.3326 29.8682 27.5 28.5695C28.6674 29.8682 30.3387 30.6921 32.2266 30.6921C34.1144 30.6921 35.7858 29.8682 36.9531 28.5695C38.1205 29.8682 39.7918 30.6921 41.6797 30.6921ZM24.0625 44.6875H30.9375V37.8125H24.0625V44.6875ZM44.6875 22.3438V24.0625C44.6875 25.8878 43.2795 27.2546 41.6797 27.2546C40.0799 27.2546 38.6719 25.8878 38.6719 24.0625V22.3438H44.6875ZM43.9455 18.9062L41.4246 12.0312H13.5754L11.0546 18.9062H43.9455ZM10.3125 22.3438V24.0625C10.3125 25.8878 11.7205 27.2546 13.3203 27.2546C14.9201 27.2546 16.3281 25.8878 16.3281 24.0625V22.3438H10.3125ZM19.7656 22.3438V24.0625C19.7656 25.8878 21.1736 27.2546 22.7734 27.2546C24.3733 27.2546 25.7812 25.8878 25.7812 24.0625V22.3438H19.7656ZM29.2188 22.3438V24.0625C29.2188 25.8878 30.6268 27.2546 32.2266 27.2546C33.8264 27.2546 35.2344 25.8878 35.2344 24.0625V22.3438H29.2188Z" fill="white" />
+                    </svg>
+                  </div>
+                  <div class="content">
+                    <p class="font-jost font-medium text-[14px] md:text-[18px] leading-[26px] text-white p-0 m-0">
+                      Delivery in
+                      <span class="block">30 minutes</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start md:items-center flex-col md:flex-row gap-[18px] group">
+                  <div class="icon">
+                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" d="M29.7028 41.8867H7.4882C6.12566 41.8867 5.02051 42.7669 5.02051 43.8526V43.9102C5.02051 44.9959 6.12523 45.8753 7.4882 45.8753H29.7028C31.0662 45.8753 32.1714 44.9959 32.1714 43.9102V43.8526C32.1713 42.7669 31.0661 41.8867 29.7028 41.8867Z" fill="#fff" />
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" d="M10.5154 30.4927C10.124 30.4927 9.80688 30.8101 9.80688 31.2016C9.80688 31.5938 10.124 31.9112 10.5154 31.9112C10.9076 31.9112 11.2255 31.5938 11.2255 31.2016C11.2256 30.8101 10.9076 30.4927 10.5154 30.4927Z" fill="#fff" />
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" d="M15.8351 30.4927C15.4432 30.4927 15.1252 30.8101 15.1252 31.2016C15.1252 31.5938 15.4432 31.9112 15.8351 31.9112C16.2264 31.9112 16.544 31.5938 16.544 31.2016C16.544 30.8101 16.2264 30.4927 15.8351 30.4927Z" fill="#fff" />
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" d="M13.3527 28.3652C12.9609 28.3652 12.6438 28.6819 12.6438 29.0741C12.6438 29.4663 12.9609 29.7837 13.3527 29.7837C13.7441 29.7837 14.0616 29.4663 14.0616 29.0741C14.0616 28.6819 13.7441 28.3652 13.3527 28.3652Z" fill="#fff" />
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" d="M17.2532 28.1881C17.2532 28.5796 17.5707 28.8962 17.9622 28.8962C18.3539 28.8962 18.6715 28.5796 18.6715 28.1881C18.6715 27.7959 18.3539 27.4792 17.9622 27.4792C17.5707 27.4794 17.2532 27.7959 17.2532 28.1881Z" fill="#fff" />
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" d="M20.6213 32.0882C21.0139 32.0882 21.331 31.7708 21.331 31.3786C21.331 30.9871 21.0139 30.6697 20.6213 30.6697C20.23 30.6697 19.9121 30.9871 19.9121 31.3786C19.912 31.7708 20.2299 32.0882 20.6213 32.0882Z" fill="#fff" />
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" d="M22.9268 29.7757C23.3182 29.7757 23.6352 29.4574 23.6352 29.0652C23.6352 28.6737 23.3181 28.3562 22.9268 28.3562C22.535 28.3562 22.217 28.6737 22.217 29.0652C22.217 29.4574 22.535 29.7757 22.9268 29.7757Z" fill="#fff" />
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" d="M26.4722 32.0882C26.8637 32.0882 27.1816 31.7708 27.1816 31.3786C27.1816 30.9871 26.8637 30.6697 26.4722 30.6697C26.0812 30.6697 25.7629 30.9871 25.7629 31.3786C25.7629 31.7708 26.0812 32.0882 26.4722 32.0882Z" fill="#fff" />
+                      <path
+                        class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300"
+                        d="M32.396 39.2299C32.4719 39.208 32.5591 39.1933 32.6782 39.1933C33.1669 39.1933 33.5636 38.7972 33.5636 38.3074C33.5636 37.8178 33.1669 37.4208 32.6777 37.4208C32.3655 37.4208 32.0695 37.4687 31.8019 37.5572C31.5681 37.6351 31.357 37.743 31.1743 37.8649C30.8539 38.0784 30.616 38.3261 30.4187 38.5493C30.2704 38.7175 30.1434 38.8742 30.0269 39.0058C29.8539 39.2056 29.7057 39.3435 29.5733 39.4231C29.5063 39.4621 29.4429 39.4913 29.3679 39.5124C29.2932 39.5336 29.2047 39.5482 29.0869 39.5482C28.9501 39.5482 28.8531 39.5295 28.7698 39.5019C28.6972 39.4783 28.633 39.4459 28.564 39.4005C28.4442 39.3225 28.3107 39.1942 28.1572 39.0196C28.0423 38.8897 27.9165 38.7345 27.7698 38.5657C27.5502 38.3171 27.281 38.0329 26.9006 37.8023C26.7114 37.687 26.4954 37.5895 26.2579 37.5222C26.0211 37.4556 25.7646 37.4207 25.4963 37.4207C25.1841 37.4207 24.8885 37.4677 24.6206 37.5571C24.3863 37.635 24.1759 37.7429 23.9932 37.8648C23.6717 38.0783 23.4346 38.326 23.2376 38.5492C23.0886 38.7174 22.9624 38.8741 22.8454 39.0057C22.6713 39.2055 22.5251 39.3434 22.3923 39.423C22.325 39.462 22.2616 39.4912 22.1869 39.5123C22.1123 39.5334 22.0233 39.5481 21.9055 39.5481C21.7683 39.5481 21.6717 39.5294 21.5888 39.5018C21.5157 39.4774 21.4515 39.445 21.3825 39.4003C21.2636 39.3224 21.1304 39.1941 20.9766 39.0195C20.8608 38.8896 20.7358 38.7344 20.5892 38.5672C20.3697 38.3171 20.0996 38.0329 19.7204 37.8023C19.5308 37.687 19.3152 37.5895 19.0774 37.5222C18.8406 37.4556 18.5837 37.4198 18.3158 37.4207C18.0036 37.4198 17.7075 37.4677 17.4404 37.5571C17.2066 37.6341 16.9959 37.7422 16.8124 37.8648C16.4921 38.0783 16.2545 38.3252 16.0563 38.5492C15.9085 38.7174 15.7826 38.8741 15.6661 39.0057C15.492 39.2055 15.3441 39.3434 15.2122 39.423C15.1456 39.462 15.0824 39.4912 15.0073 39.5123C14.9313 39.5334 14.8432 39.5481 14.7255 39.5481C14.5882 39.5481 14.4916 39.5294 14.4084 39.5018C14.3361 39.4774 14.2715 39.445 14.2034 39.3995C14.0835 39.3224 13.9508 39.194 13.7965 39.0195C13.6807 38.8887 13.5557 38.7337 13.4092 38.5672C13.1895 38.3171 12.9195 38.0329 12.5395 37.8023C12.351 37.687 12.1347 37.5895 11.8979 37.5222C11.6604 37.4556 11.4039 37.4198 11.1355 37.4207C10.8233 37.4198 10.5281 37.4677 10.2598 37.5571C10.0259 37.6341 9.816 37.7422 9.63284 37.864C9.31165 38.0784 9.075 38.3253 8.87648 38.5493C8.72824 38.7175 8.60202 38.8742 8.48633 39.0058C8.31209 39.2056 8.16481 39.3435 8.03236 39.4231C7.96533 39.4621 7.90195 39.4913 7.82687 39.5124C7.75135 39.5336 7.66369 39.5473 7.54596 39.5482C7.40835 39.5473 7.3121 39.5295 7.22842 39.5019C7.15623 39.4775 7.09156 39.4451 7.02335 39.3996C6.9039 39.3216 6.77005 39.195 6.6173 39.0196C6.5016 38.8888 6.3757 38.7338 6.22918 38.5664C6.00993 38.3172 5.73955 38.033 5.36035 37.8023C5.1715 37.687 4.95559 37.5895 4.71797 37.5222C4.48132 37.4556 4.22426 37.4198 3.95549 37.4207C3.46661 37.4207 3.06958 37.8177 3.06958 38.3073C3.06958 38.797 3.46661 39.1932 3.95549 39.1932C4.09363 39.1932 4.1902 39.2128 4.2726 39.2395C4.34564 39.2647 4.40945 39.2965 4.47842 39.3419C4.59744 39.4198 4.73064 39.5464 4.8849 39.722C4.99984 39.8518 5.12574 40.0077 5.27184 40.1751C5.49194 40.4244 5.76146 40.7085 6.14077 40.9399C6.32994 41.0544 6.5464 41.1519 6.78337 41.2185C7.02013 41.2858 7.27676 41.3207 7.54585 41.3207C7.85727 41.3216 8.15278 41.2737 8.4208 41.1852C8.65455 41.1063 8.86531 40.9991 9.04771 40.8773C9.3688 40.6637 9.60631 40.4145 9.80439 40.1919C9.95221 40.0239 10.0789 39.868 10.195 39.7348C10.3692 39.5359 10.5157 39.3978 10.6485 39.3182C10.7154 39.2793 10.7784 39.2501 10.8543 39.2289C10.9291 39.2078 11.0168 39.1931 11.1358 39.1931C11.2725 39.1931 11.3693 39.2127 11.4525 39.2394C11.5246 39.2646 11.5892 39.2964 11.6579 39.3418C11.7777 39.4197 11.9108 39.5463 12.0643 39.7219C12.1793 39.8517 12.3051 40.0076 12.4517 40.175C12.6718 40.4243 12.9413 40.7084 13.321 40.9398C13.5102 41.0552 13.7262 41.1518 13.9629 41.2184C14.2004 41.2857 14.4571 41.3206 14.7254 41.3206C15.0368 41.3215 15.3332 41.2736 15.6003 41.1851C15.8351 41.1062 16.0453 40.999 16.228 40.8772C16.5491 40.6636 16.7867 40.4144 16.9836 40.1918C17.1326 40.0238 17.2589 39.8678 17.3755 39.7346C17.5497 39.5358 17.6966 39.3977 17.829 39.3181C17.8956 39.2792 17.9593 39.25 18.0345 39.2288C18.1092 39.2077 18.1974 39.193 18.3162 39.193C18.453 39.193 18.5497 39.2126 18.632 39.2393C18.705 39.2645 18.7697 39.2963 18.8384 39.3417C18.9573 39.4196 19.0908 39.5462 19.2446 39.7218C19.36 39.8516 19.4859 40.0075 19.632 40.1749C19.852 40.4242 20.1216 40.7083 20.5013 40.9397C20.6904 41.0551 20.9064 41.1516 21.1435 41.2182C21.3811 41.2856 21.6372 41.3205 21.906 41.3205C22.2174 41.3214 22.5134 41.2735 22.7806 41.1849C23.0152 41.1061 23.2256 40.9989 23.4087 40.8771C23.7295 40.6635 23.9674 40.4143 24.1643 40.1917C24.3126 40.0237 24.4392 39.8677 24.5554 39.7345C24.7292 39.5357 24.877 39.3976 25.0097 39.318C25.0759 39.2791 25.1396 39.2498 25.2147 39.2287C25.2902 39.2076 25.378 39.1929 25.4965 39.1929C25.6333 39.1929 25.7296 39.2125 25.8132 39.2392C25.8854 39.2644 25.9504 39.2961 26.0182 39.3416C26.1384 39.4195 26.2711 39.5461 26.4255 39.7216C26.5412 39.8515 26.6662 40.0082 26.8136 40.1748C27.0328 40.4248 27.3028 40.7082 27.682 40.9396C27.8711 41.055 28.0872 41.1515 28.3247 41.2181C28.5618 41.2855 28.8188 41.3213 29.0872 41.3213C29.399 41.3213 29.6954 41.2734 29.9617 41.1848C30.196 41.1069 30.407 40.9988 30.5898 40.877C30.911 40.6634 31.1488 40.4142 31.3458 40.1916C31.4936 40.0236 31.6207 39.8676 31.7364 39.7344C31.9105 39.5356 32.0579 39.3974 32.1903 39.3178C32.2572 39.2794 32.3201 39.2502 32.396 39.2299Z"
+                        fill="#fff"
+                      />
+                      <path class="group-hover:fill-Bright-Orange transition-all ease-linear duration-300" d="M52.3589 12.9223H44.4482L46.1084 5.28784L51.9208 1.91308L50.8103 0L44.1534 3.86515L42.1843 12.9223H24.4284L25.3554 24.997C23.2559 24.2003 20.8849 23.7392 18.3733 23.7392C14.4634 23.7409 10.895 24.8516 8.15809 26.621C6.78942 27.507 5.62669 28.5593 4.73992 29.7375C4.05371 30.6494 3.53486 31.64 3.22721 32.6818H3.16512L3.01043 33.605C3.00592 33.6335 3.00237 33.6504 3.00033 33.6595L2.99947 33.6643C2.9955 33.674 2.9869 33.6983 2.97434 33.7406C2.96166 33.782 2.94705 33.8389 2.93738 33.8932C2.92202 33.9753 2.91504 34.0491 2.91182 34.1149C2.90816 34.1815 2.90688 34.244 2.90688 34.3171C2.90773 34.6719 2.95597 35.0203 3.07381 35.354C3.16147 35.6034 3.29016 35.8428 3.45913 36.0531C3.71082 36.3714 4.05221 36.6158 4.41605 36.7604C4.78149 36.9074 5.16521 36.9658 5.55214 36.9658H31.1934C31.5377 36.9658 31.8783 36.9196 32.2072 36.8066C32.4528 36.7213 32.6915 36.5971 32.9035 36.4322C33.2234 36.1855 33.4734 35.846 33.6242 35.4781C33.7764 35.1078 33.8381 34.7156 33.8381 34.3169C33.8377 34.2138 33.8365 34.1317 33.8276 34.0303C33.8207 33.9555 33.8044 33.8606 33.7834 33.7817C33.7671 33.7224 33.7521 33.6818 33.7476 33.6672L33.7464 33.6632C33.7452 33.6583 33.7411 33.6428 33.735 33.6047V33.6055C33.5041 32.2243 32.8918 30.9146 32.0067 29.7372C30.9235 28.3007 29.4334 27.0486 27.6563 26.0612L26.8176 15.1347H49.97L47.4373 48.1178H33.2055C32.953 47.8369 32.631 47.5981 32.2619 47.4422C31.8799 47.279 31.458 47.2028 31.0228 47.2035H5.72949C5.21387 47.202 4.71532 47.3107 4.28338 47.5405C3.95972 47.7111 3.68042 47.9457 3.46117 48.2121C3.13074 48.6125 2.93051 49.0712 2.80869 49.5365C2.68773 50.0034 2.64154 50.4833 2.64111 50.969V51.2345C2.64068 52.2706 3.06457 53.219 3.74423 53.8971C4.42185 54.5768 5.37027 55.0006 6.40647 54.9999H30.3397C31.3758 55.0007 32.3238 54.5769 33.0019 53.8971C33.6815 53.219 34.1054 52.2707 34.105 51.2345V50.969C34.105 50.7546 34.0956 50.541 34.0758 50.3298H49.4858L52.3589 12.9223ZM27.3862 28.4772C28.5624 29.2381 29.5312 30.1272 30.2384 31.0676C30.9461 32.0086 31.3902 32.9953 31.5531 33.9706V33.9714C31.5722 34.0851 31.5932 34.1825 31.6172 34.2678C31.6204 34.2768 31.6233 34.2856 31.6254 34.2945C31.6254 34.3027 31.6262 34.3076 31.6262 34.3173C31.6262 34.4683 31.6043 34.5642 31.5865 34.6153C31.5723 34.6543 31.5618 34.6682 31.5564 34.6746C31.5475 34.6843 31.5491 34.6875 31.5016 34.7095C31.4553 34.7282 31.3555 34.7542 31.1935 34.7542H5.55203C5.40744 34.7542 5.31291 34.7339 5.26135 34.7152C5.22192 34.7022 5.20689 34.6917 5.19958 34.686C5.19023 34.6762 5.18658 34.6787 5.16585 34.6332C5.14963 34.5951 5.1289 34.5155 5.12202 34.3928L5.1926 33.9707C5.35545 32.9954 5.79964 32.0088 6.50733 31.0677C7.56694 29.6564 9.22027 28.3645 11.2702 27.4396C13.3194 26.5131 15.7579 25.9504 18.3733 25.9512C21.8597 25.9495 25.0338 26.9531 27.3862 28.4772ZM31.8925 51.2348C31.8921 51.6667 31.7204 52.0484 31.4378 52.3326C31.1531 52.616 30.7716 52.7873 30.3395 52.7882H6.40625C5.97345 52.7873 5.59264 52.616 5.3084 52.3326C5.02545 52.0484 4.85368 51.6668 4.85325 51.2348V50.9692C4.85325 50.6663 4.88086 50.3942 4.92963 50.175C4.96658 50.011 5.01449 49.877 5.0652 49.7788C5.1029 49.7041 5.14147 49.6496 5.17767 49.6083C5.23363 49.5458 5.28079 49.5116 5.35631 49.4784C5.43183 49.4459 5.54516 49.4167 5.72939 49.4159H31.0227C31.2427 49.4167 31.3577 49.4565 31.4336 49.4962C31.4909 49.5279 31.5335 49.5611 31.583 49.6204C31.6545 49.7065 31.7373 49.86 31.797 50.0938C31.8579 50.3245 31.8933 50.6281 31.8924 50.9692L31.8925 51.2348Z" fill="#fff" />
+                    </svg>
+                  </div>
+                  <div class="content">
+                    <p class="font-jost font-medium text-[14px] md:text-[18px] leading-[26px] text-white p-0 m-0">
+                      Delivery in
+                      <span class="block">30 minutes</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute top-0 left-0 w-full h-full -z-[1]">
+              <img class="w-full h-full" src="./assets/pictures/fastest-delivery.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fastest delivery -->
+
+    <!-- best pizza menu -->
+    <div class="best-pizza-menu py-[70px] md:pt-[140px] md:pb-[160px] relative fade-in overflow-hidden">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-x-4 lg:gap-x-[30px] xl:gap-x-[94px]">
+          <div class="img-1 absolute bottom-[-12rem] lg:bottom-0 right-0">
+            <img src="./assets/pictures/pizza.png" alt="" />
+          </div>
+          <div class="col-span-12 text-center">
+            <h2 class="subtitle font-satisfy font-normal text-Bright-Orange flex items-center justify-center gap-[15px] mb-[19px]">
+              <span>
+                <svg width="13" height="30" viewBox="0 0 13 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.02392 28.6457L7.97935 17.6722C9.169 17.5219 10.2426 17.1711 11.1421 16.6701C12.3607 15.9518 13.0281 15.0165 12.9991 14.0144L12.9701 11.2919L12.4768 0.418535C12.4478 0.201403 12.1286 0.000973324 11.7224 0.000973324C11.2872 -0.0157292 10.939 0.184701 10.91 0.435238L10.5908 10.5903L7.66018 10.6071L7.25396 0.435238C7.22494 0.201404 6.87675 0.000973324 6.47053 0.000973324C6.00628 -0.0157292 5.62907 0.184701 5.62907 0.451941L5.3099 10.6071L2.3793 10.6238L1.94406 0.451941C1.91504 0.234808 1.59587 0.0343784 1.18965 0.0343784C0.754411 0.0176759 0.40622 0.218106 0.377205 0.468643L0 11.3253L0.0290154 14.0645C0.0290154 15.8349 2.23422 17.3215 5.1358 17.6889L4.43942 28.6624C4.43942 28.6847 4.43942 28.707 4.43942 28.7292C4.49745 29.4475 5.54202 30.032 6.81872 29.9986C8.0664 29.9819 9.08195 29.3639 9.02392 28.6457Z" fill="#FB9015" />
+                </svg>
+              </span>
+              BEST Pizza MENU
+            </h2>
+            <h1 class="title font-plus-jakarta-sans font-semibold text-white mb-[57px] skew-up">Welcome to Our Pizzeria</h1>
+          </div>
+
+          <div class="col-span-12 lg:col-span-6">
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay=".5s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">Shrimp Scampi Pizza</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$120</span>
+              </p>
+            </div>
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">Buffalo Chicken Pizza</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$160</span>
+              </p>
+            </div>
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay="1.5s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">Smoked Sausage Pizza</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$90</span>
+              </p>
+            </div>
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay="2s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">Classic Pepperoni Pizza</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$320</span>
+              </p>
+            </div>
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay="2.5s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">California Style Pizza</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$170</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6">
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay=".5s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">Shrimp Scampi Pizza</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$120</span>
+              </p>
+            </div>
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">Fresh Mozzarella Pizza</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$160</span>
+              </p>
+            </div>
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay="1.5s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">Quattro Formaggi Pizza</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$90</span>
+              </p>
+            </div>
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay="2s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">Coconut Chia Bowl</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$320</span>
+              </p>
+            </div>
+            <div class="mb-6 wow bounceInUp" data-wow-duration="2s" data-wow-delay="2.5s">
+              <h4 class="font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-white mb-[15px]">Gazpacho</h4>
+              <p class="font-plus-jakarta-sans font-normal text-base leading-[20px] text-white mb-[5px]">Chilled tomato, cucumber, garlic,red pepper soup.</p>
+              <p class="relative font-plus-jakarta-sans font-semibold lg:text-[20px] xl:text-[24px] leading-[30px] text-Bright-Orange text-right before:dashed-border2">
+                <span class="bg-Deep-Teal relative pl-2">$170</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- best pizza menu -->
+
+    <!-- upcomming events -->
+    <div class="upcomming-events overflow-hidden fade-in">
+      <div class="grid grid-cols-12">
+        <div class="col-span-12 lg:col-span-6">
+          <div class="img w-full h-full relative">
+            <img class="w-full h-full min-h-[300px]" src="./assets/pictures/upcoming-events.png" alt="" />
+            <div class="overlay absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 max-w-[214px] w-full max-h-[223px] md:max-h-[355px] h-full before:bg-white/20 before:w-full before:h-full before:absolute before:top-0 before:left-0 before:blur flex items-center justify-center border-[3px] border-Bright-Orange">
+              <div class="play-btn">
+                <a href="https://www.youtube.com/watch?v=pGbIOC83-So" class="popup-video w-[65px] h-[65px] bg-white rounded-full flex items-center justify-center relative z-10">
+                  <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.332 9L0.582029 17.6603L0.582029 0.339746L14.332 9Z" fill="#FB9015" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-6">
+          <div class="bg-texture bg-no-repeat bg-cover bg-center py-[90px] px-4 lg:pl-[55px] h-full w-full">
+            <h2 class="title font-plus-jakarta-sans font-bold text-white mb-[30px] split-collab">UpComing Events</h2>
+            <p class="subtitle font-normal text-base leading-[23px] text-white mb-[57px]">
+              Dolor sit amet, consectetur adipisicing elit, sed do <br />
+              eiusmod tempor incididunt. ut labore
+            </p>
+            <div>
+              <div class="flex item-center justify-start flex-col md:flex-row gap-4 lg:gap-[30px] mb-[30px] wow bounceInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                <div class="w-[85px] flex item-center justify-end flex-col text-center border border-Bright-Orange rounded-[3px]">
+                  <span class="block font-jost font-medium text-[30px] leading-[56px] text-white">03</span>
+                  <span class="block bg-Bright-Orange font-jost font-medium text-[12px] leading-[30px] text-white">MAR , 2024</span>
+                </div>
+                <div class="content max-w-[324px]">
+                  <h4 class="font-plus-jakarta-sans font-semibold text-[22px] leading-[27px] text-white mb-5">Grand Opening Restaurant</h4>
+                  <p class="font-jost font-normal text-[16px] leading-[23px] text-white">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. ut labore</p>
+                </div>
+              </div>
+              <div class="flex item-center justify-start flex-col md:flex-row gap-4 lg:gap-[30px] mb-[30px] wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s">
+                <div class="w-[85px] flex item-center justify-end flex-col text-center border border-Bright-Orange rounded-[3px]">
+                  <span class="block font-jost font-medium text-[30px] leading-[56px] text-white">07</span>
+                  <span class="block bg-Bright-Orange font-jost font-medium text-[12px] leading-[30px] text-white">MAR , 2024</span>
+                </div>
+                <div class="content max-w-[324px]">
+                  <h4 class="font-plus-jakarta-sans font-semibold text-[22px] leading-[27px] text-white mb-5">Italian Handmade Pizzas.</h4>
+                  <p class="font-jost font-normal text-[16px] leading-[23px] text-white">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. ut labore</p>
+                </div>
+              </div>
+              <div class="flex item-center justify-start flex-col md:flex-row gap-4 lg:gap-[30px] wow bounceInUp" data-wow-duration="2s" data-wow-delay="1.5s">
+                <div class="w-[85px] flex item-center justify-end flex-col text-center border border-Bright-Orange rounded-[3px]">
+                  <span class="block font-jost font-medium text-[30px] leading-[56px] text-white">13</span>
+                  <span class="block bg-Bright-Orange font-jost font-medium text-[12px] leading-[30px] text-white">MAR , 2024</span>
+                </div>
+                <div class="content max-w-[324px]">
+                  <h4 class="font-plus-jakarta-sans font-semibold text-[22px] leading-[27px] text-white mb-5">Best Pizza Deals &amp; Offers</h4>
+                  <p class="font-jost font-normal text-[16px] leading-[23px] text-white">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. ut labore</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- upcomming events -->
+
+    <!-- section gap -->
+    <div class="section-gap h-[80px] md:h-[140px]"></div>
+    <!-- section gap -->
+
+    <!-- faq -->
+    <div class="faq fade-in overflow-hidden">
+      <div class="container">
+        <div class="grid grid-cols-12 lg:gap-x-[54px]">
+          <div class="col-span-12 lg:col-span-6">
+            <h2 class="subtitle font-Roboto font-normal text-Bright-Orange mb-[5px]">Some faq</h2>
+            <h1 class="title font-plus-jakarta-sans font-semibold text-white mb-[60px] skew-up">Frequently Asked Questions</h1>
+            <!-- accordion -->
+            <div class="">
+              <div class="">
+                <div x-data="{selected:1}">
+                  <!-- Column 1 -->
+                  <div class="max-w-full mx-auto">
+                    <ul class="">
+                      <li :class="{'border-t-0' : selected == 1}" class="relative border border-white/60 bg-black/5 rounded-[30px] mb-[30px] overflow-hidden wow bounceInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                        <button type="button" class="w-full text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+                          <div :class="{'bg-Bright-Orange' : selected == 1}" class="flex items-center justify-between px-5 md:px-[30px] py-[15px] font-Roboto font-medium text-sm md:text-[20px] leading-[32px] text-white transition-all duration-700">
+                            <span> What kind of recipes can I find on your website?</span>
+                            <svg :class="{'transform rotate-180' : selected == 1}" class="w-5 h-5 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                              <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                          </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                          <div class="py-2 md:py-5 px-5 md:px-[30px] font-jost font-normal text-sm md:text-[16px] leading-[25px] text-white">
+                            <p>It is a long established fact that a reader will be distracted by the readable the a content of a page when looking at its layout. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li :class="{'border-t-0' : selected == 2}" class="relative border border-white/60 bg-black/5 rounded-[30px] mb-[30px] overflow-hidden wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s">
+                        <button type="button" class="w-full text-left" @click="selected !== 2 ? selected = 2 : selected = null">
+                          <div :class="{'bg-Bright-Orange' : selected == 2}" class="flex items-center justify-between px-5 md:px-[30px] py-[15px] font-Roboto font-medium text-sm md:text-[20px] leading-[32px] text-white transition-all duration-700">
+                            <span> What kind of recipes can I find on your website?</span>
+                            <svg :class="{'transform rotate-180' : selected == 2}" class="w-5 h-5 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                              <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                          </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                          <div class="py-2 md:py-5 px-5 md:px-[30px] font-jost font-normal text-sm md:text-[16px] leading-[25px] text-white">
+                            <p>It is a long established fact that a reader will be distracted by the readable the a content of a page when looking at its layout. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li :class="{'border-t-0' : selected == 3}" class="relative border border-white/60 bg-black/5 rounded-[30px] mb-[30px] overflow-hidden wow bounceInUp" data-wow-duration="2s" data-wow-delay="1.5s">
+                        <button type="button" class="w-full text-left" @click="selected !== 3 ? selected = 3 : selected = null">
+                          <div :class="{'bg-Bright-Orange' : selected == 3}" class="flex items-center justify-between px-5 md:px-[30px] py-[15px] font-Roboto font-medium text-sm md:text-[20px] leading-[32px] text-white transition-all duration-700">
+                            <span> What kind of recipes can I find on your website?</span>
+                            <svg :class="{'transform rotate-180' : selected == 3}" class="w-5 h-5 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                              <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                          </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                          <div class="py-2 md:py-5 px-5 md:px-[30px] font-jost font-normal text-sm md:text-[16px] leading-[25px] text-white">
+                            <p>It is a long established fact that a reader will be distracted by the readable the a content of a page when looking at its layout. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li :class="{'border-t-0' : selected == 4}" class="relative border border-white/60 bg-black/5 rounded-[30px] mb-[30px] overflow-hidden wow bounceInUp" data-wow-duration="2s" data-wow-delay="2s">
+                        <button type="button" class="w-full text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+                          <div :class="{'bg-Bright-Orange' : selected == 4}" class="flex items-center justify-between px-5 md:px-[30px] py-[15px] font-Roboto font-medium text-sm md:text-[20px] leading-[32px] text-white transition-all duration-700">
+                            <span> What kind of recipes can I find on your website?</span>
+                            <svg :class="{'transform rotate-180' : selected == 4}" class="w-5 h-5 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                              <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                          </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                          <div class="py-2 md:py-5 px-5 md:px-[30px] font-jost font-normal text-sm md:text-[16px] leading-[25px] text-white">
+                            <p>It is a long established fact that a reader will be distracted by the readable the a content of a page when looking at its layout. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6">
+            <div class="flex items-end gap-[30px] relative">
+              <div class="img max-h-[300px] md:max-h-[400px] md:max-w-[100% - 1rem] lg:max-w-xl lg:max-h-[659px] w-full h-full overflow-hidden rounded-[5px] wow bounceInDown" data-wow-duration="2s" data-wow-delay=".5s">
+                <img class="w-full h-full" src="./assets/pictures/faq-1.png" alt="" />
+              </div>
+              <div class="vertical-border w-[19px] h-[300px] bg-Bright-Orange wow bounceInRight" data-wow-duration="2s" data-wow-delay="1s"></div>
+              <div class="img max-w-[200px] lg:max-w-[295px] max-h-[300px] lg:max-h-[400px] w-full h-full overflow-hidden rounded-[20px] bg-white absolute top-[8rem] right-[-0.5rem] lg:right-[-3rem] wow bounceInLeft" data-wow-duration="2s" data-wow-delay="1.5s">
+                <img class="w-full h-full p-1 md:p-[10px] rounded-[20px]" src="./assets/pictures/faq-2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- faq -->
+
+    <!-- section gap -->
+    <div class="section-gap h-[80px] md:h-[140px]"></div>
+    <!-- section gap -->
+
+    <!-- customers-feedback -->
+    <div class="customers-feedback bg-texture bg-no-repeat bg-cover bg-center py-[140px] overflow-hidden fade-in">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12 text-center mb-5 lg:mb-[70px]">
+            <h2 class="subtitle font-satisfy font-normal text-Bright-Orange flex items-center justify-center gap-[15px] mb-[19px]">
+              <span>
+                <svg width="13" height="30" viewBox="0 0 13 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.02392 28.6457L7.97935 17.6722C9.169 17.5219 10.2426 17.1711 11.1421 16.6701C12.3607 15.9518 13.0281 15.0165 12.9991 14.0144L12.9701 11.2919L12.4768 0.418535C12.4478 0.201403 12.1286 0.000973324 11.7224 0.000973324C11.2872 -0.0157292 10.939 0.184701 10.91 0.435238L10.5908 10.5903L7.66018 10.6071L7.25396 0.435238C7.22494 0.201404 6.87675 0.000973324 6.47053 0.000973324C6.00628 -0.0157292 5.62907 0.184701 5.62907 0.451941L5.3099 10.6071L2.3793 10.6238L1.94406 0.451941C1.91504 0.234808 1.59587 0.0343784 1.18965 0.0343784C0.754411 0.0176759 0.40622 0.218106 0.377205 0.468643L0 11.3253L0.0290154 14.0645C0.0290154 15.8349 2.23422 17.3215 5.1358 17.6889L4.43942 28.6624C4.43942 28.6847 4.43942 28.707 4.43942 28.7292C4.49745 29.4475 5.54202 30.032 6.81872 29.9986C8.0664 29.9819 9.08195 29.3639 9.02392 28.6457Z" fill="#FB9015" />
+                </svg>
+              </span>
+              Customer Feedback
+            </h2>
+            <h1 class="title font-plus-jakarta-sans font-semibold text-white split-collab">What Our Clients Say</h1>
+          </div>
+
+          <div class="col-span-12">
+            <div class="swiper customer-feedback2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide group">
+                  <div class="img max-w-[100px] max-h-[100px] w-full h-full bg-texture bg-no-repeat bg-cover bg-center rounded-full relative top-[4rem] left-4 md:left-[30px]">
+                    <img class="w-full h-full p-[5px]" src="./assets/pictures/customer-feedback-1.png" alt="" />
+                  </div>
+                  <div class="bg-Cyan pt-[36px] pb-[53px] px-[25px]">
+                    <div class="flex items-center justify-end gap-2">
+                      <ul class="flex items-center justify-start gap-2">
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/half-star.svg" alt="" />
+                        </li>
+                      </ul>
+                    </div>
+                    <h4 class="font-Playfair-Display font-bold text-[24px] leading-[31px] text-white mb-[10px] mt-10">Courtney Henry</h4>
+                    <p class="font-jost font-normal text-[16px] leading-[23px] text-white mb-5 group-hover:text-Bright-Orange transition-all duration-700">Tourist</p>
+                    <p class="font-jost font-normal text-[16px] leading-[28px] text-white">Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+                  </div>
+                </div>
+                <div class="swiper-slide group">
+                  <div class="img max-w-[100px] max-h-[100px] w-full h-full bg-Deep-Teal rounded-full relative top-[4rem] left-4 md:left-[30px]">
+                    <img class="w-full h-full p-[5px]" src="./assets/pictures/customer-feedback-2.png" alt="" />
+                  </div>
+                  <div class="bg-Cyan pt-[36px] pb-[53px] px-[25px]">
+                    <div class="flex items-center justify-end gap-2">
+                      <ul class="flex items-center justify-start gap-2">
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/half-star.svg" alt="" />
+                        </li>
+                      </ul>
+                    </div>
+                    <h4 class="font-Playfair-Display font-bold text-[24px] leading-[31px] text-white mb-[10px] mt-10">Jacob Jones</h4>
+                    <p class="font-jost font-normal text-[16px] leading-[23px] text-white mb-5 group-hover:text-Bright-Orange transition-all duration-700">Web Design</p>
+                    <p class="font-jost font-normal text-[16px] leading-[28px] text-white">Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+                  </div>
+                </div>
+                <div class="swiper-slide group">
+                  <div class="img max-w-[100px] max-h-[100px] w-full h-full bg-Deep-Teal rounded-full relative top-[4rem] left-4 md:left-[30px]">
+                    <img class="w-full h-full p-[5px]" src="./assets/pictures/customer-feedback-3.png" alt="" />
+                  </div>
+                  <div class="bg-Cyan pt-[36px] pb-[53px] px-[25px]">
+                    <div class="flex items-center justify-end gap-2">
+                      <ul class="flex items-center justify-start gap-2">
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/full-star.svg" alt="" />
+                        </li>
+                        <li class="w-5 h-5 flex items-center justify-center text-white">
+                          <img src="./assets/images/home-2/half-star.svg" alt="" />
+                        </li>
+                      </ul>
+                    </div>
+                    <h4 class="font-Playfair-Display font-bold text-[24px] leading-[31px] text-white mb-[10px] mt-10">Silverster Scoot</h4>
+                    <p class="font-jost font-normal text-[16px] leading-[23px] text-white mb-5 group-hover:text-Bright-Orange transition-all duration-700">Sr. UX/UI Designer</p>
+                    <p class="font-jost font-normal text-[16px] leading-[28px] text-white">Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- customers-feedback -->
+
+    <!-- news-blog -->
+    <div class="news-blog pt-[140px] relative overflow-hidden fade-in">
+      <div class="container pb-[140px]">
+        <div class="img-1 absolute top-[6rem] right-0 -z-[1]">
+          <img src="./assets/pictures/pizza.png" alt="" />
+        </div>
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 text-center mb-[70px]">
+            <h2 class="subtitle font-satisfy font-normal text-Bright-Orange flex items-center justify-center gap-[15px] mb-[19px]">
+              <span>
+                <svg width="13" height="30" viewBox="0 0 13 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.02392 28.6457L7.97935 17.6722C9.169 17.5219 10.2426 17.1711 11.1421 16.6701C12.3607 15.9518 13.0281 15.0165 12.9991 14.0144L12.9701 11.2919L12.4768 0.418535C12.4478 0.201403 12.1286 0.000973324 11.7224 0.000973324C11.2872 -0.0157292 10.939 0.184701 10.91 0.435238L10.5908 10.5903L7.66018 10.6071L7.25396 0.435238C7.22494 0.201404 6.87675 0.000973324 6.47053 0.000973324C6.00628 -0.0157292 5.62907 0.184701 5.62907 0.451941L5.3099 10.6071L2.3793 10.6238L1.94406 0.451941C1.91504 0.234808 1.59587 0.0343784 1.18965 0.0343784C0.754411 0.0176759 0.40622 0.218106 0.377205 0.468643L0 11.3253L0.0290154 14.0645C0.0290154 15.8349 2.23422 17.3215 5.1358 17.6889L4.43942 28.6624C4.43942 28.6847 4.43942 28.707 4.43942 28.7292C4.49745 29.4475 5.54202 30.032 6.81872 29.9986C8.0664 29.9819 9.08195 29.3639 9.02392 28.6457Z" fill="#FB9015" />
+                </svg>
+              </span>
+              News &amp; Blogs
+            </h2>
+            <h1 class="title font-plus-jakarta-sans font-semibold text-white skew-up">Get Every Single Updates</h1>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4 bg-Deep-Teal">
+            <div class="border border-light-coral/30 py-5 lg:py-[37px] px-4 lg:px-[32px]">
+              <p class="font-manrope font-medium text-[12px] lg:text-[16px] leading-[22px] text-Gray mb-2 lg:mb-[13px]">
+                UI Design |
+                <span class="text-Bright-Orange">17 Dec 2024</span>
+              </p>
+              <h2 class="font-Playfair-Display font-bold text-[20px] lg:text-[30px] leading-[40px] text-white mb-5 lg:mb-[38px]">You’re Still Not Using Digital Tools?</h2>
+              <div class="img w-full h-full mb-[25px] wow overlay-anim zoom-effect overflow-hidden">
+                <img class="w-full h-full" src="./assets/pictures/news-blog-1.png" alt="" />
+              </div>
+              <a href="blog-details.html" class="flex items-center justify-between">
+                <span class="font-manrope font-semibold text-[18px] leading-[24px] text-white">Read More</span>
+                <span class="w-10 h-10 rounded-full border border-Bright-Orange flex items-center justify-center">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.77 10.3052L11.9072 3.44835M3.51953 1.2417L12.583 2.99123L10.8335 12.0547" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4 bg-Deep-Teal">
+            <div class="border border-light-coral/30 py-5 lg:py-[37px] px-4 lg:px-[32px]">
+              <p class="text-[12px] lg:text-[16px] leading-[22px] text-Gray mb-2 lg:mb-[13px]">
+                UI Design |
+                <span class="text-Bright-Orange">19 Dec 2024</span>
+              </p>
+              <h2 class="font-Playfair-Display font-bold text-[20px] lg:text-[30px] leading-[40px] text-white mb-5 lg:mb-[38px]">What is Digital Agency Marketing</h2>
+              <div class="img w-full h-full mb-[25px] wow overlay-anim zoom-effect overflow-hidden">
+                <img class="w-full h-full" src="./assets/pictures/news-blog-2.png" alt="" />
+              </div>
+              <a href="blog-details.html" class="flex items-center justify-between">
+                <span class="font-manrope font-semibold text-[18px] leading-[24px] text-white">Read More</span>
+                <span class="w-10 h-10 rounded-full border border-Bright-Orange flex items-center justify-center">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.77 10.3052L11.9072 3.44835M3.51953 1.2417L12.583 2.99123L10.8335 12.0547" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4 bg-Deep-Teal">
+            <div class="border border-light-coral/30 py-5 lg:py-[37px] px-4 lg:px-[32px]">
+              <p class="font-manrope font-medium text-[12px] lg:text-[16px] leading-[22px] text-Gray mb-2 lg:mb-[13px]">
+                UI Design |
+                <span class="text-Bright-Orange">22 Dec 2024</span>
+              </p>
+              <h2 class="font-Playfair-Display font-bold text-[20px] lg:text-[30px] leading-[40px] text-white mb-5 lg:mb-[38px]">Innovation Junction Exploring Cutting</h2>
+              <div class="img w-full h-full mb-[25px] wow overlay-anim zoom-effect overflow-hidden">
+                <img class="w-full h-full" src="./assets/pictures/news-blog-3.png" alt="" />
+              </div>
+              <a href="blog-details.html" class="flex items-center justify-between">
+                <span class="font-manrope font-semibold text-[18px] leading-[24px] text-white">Read More</span>
+                <span class="w-10 h-10 rounded-full border border-Bright-Orange flex items-center justify-center">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.77 10.3052L11.9072 3.44835M3.51953 1.2417L12.583 2.99123L10.8335 12.0547" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-12">
+        <!-- food image slider -->
+        <div class="col-span-12">
+          <div class="swiper-container marquee-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s" data-wow-delay=".3s">
+                <img src="./assets/pictures/food-slider-item-1.png" alt="" />
+              </div>
+              <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s" data-wow-delay=".5s">
+                <img src="./assets/pictures/food-slider-item-2.png" alt="" />
+              </div>
+              <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s" data-wow-delay="1s">
+                <img src="./assets/pictures/food-slider-item-3.png" alt="" />
+              </div>
+              <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s" data-wow-delay="1.3s">
+                <img src="./assets/pictures/food-slider-item-4.png" alt="" />
+              </div>
+              <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s" data-wow-delay="1.5s">
+                <img src="./assets/pictures/food-slider-item-5.png" alt="" />
+              </div>
+              <div class="swiper-slide wow overlay-anim zoom-effect overflow-hidden" data-wow-duration=".5s" data-wow-delay="1.8s">
+                <img src="./assets/pictures/food-slider-item-6.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer bg-texture bg-cover bg-center overflow-hidden fade-in">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-4 border-b border-white/10">
+          <div class="col-span-6 md:col-span-3">
+            <h4 class="pt-10 md:pt-[100px] font-plus-jakarta-sans font-semibold text-[18px] leading-[22px] text-white mb-[35px]">Resources</h4>
+            <ul class="pb-10 md:pb-[110px] flex items-start justify-start flex-col gap-7">
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">Potato</a>
+              </li>
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">Organic Juice</a>
+              </li>
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">Lemon Juice</a>
+              </li>
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">MuTton Tikka</a>
+              </li>
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange transition-all ease-linear duration-300" href="our-menu.html">Seafoods</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-6 md:col-span-3">
+            <h4 class="pt-10 md:pt-[100px] font-plus-jakarta-sans font-semibold text-[18px] leading-[22px] text-white mb-[35px]">Quick Link</h4>
+            <ul class="pb-10 md:pb-[110px] flex items-start justify-start flex-col gap-7">
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="reservation.html">Fast Delivery</a>
+              </li>
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="shop-details.html">Vegan Cuisine</a>
+              </li>
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="shop-pages.html">Fresh Products</a>
+              </li>
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="meet-the-chef.html">Skilled Chefs</a>
+              </li>
+              <li>
+                <a class="font-jost font-normal text-base leading-10 text-white hover:text-Bright-Orange hover:underline transition-all ease-linear duration-300" href="shop-details.html">Great Coffee</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-12 md:col-span-6 md:border-l border-white/10">
+            <div class="md:pl-[80px] xl:pl-[124px] md:pt-[100px] pb-[110px]">
+              <h1 class="font-plus-jakarta-sans font-semibold text-white footer-title">
+                We’re Now Available On <br />
+                Store Download Our Apps
+              </h1>
+              <p class="footer-desc font-jost font-normal text-white">No credit card requirement it’s full free for all</p>
+              <ul class="flex items-center justify-start gap-x-2 lg:gap-x-4 xl:gap-x-[25px]">
+                <li>
+                  <a class="footer-store flex items-center justify-center gap-[10px] border-[2px] border-white/10 rounded-[6px] font-Work-Sans font-semibold text-white hover:bg-Bright-Orange transition-all ease-linear duration-300 hover:border-Bright-Orange" href="#"
+                    >Play Store
+                    <span
+                      ><svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.88672 7.17578L10.5273 5.53516L2.84375 1.10547L8.88672 7.17578ZM1.28516 0.75L8.28516 7.75L1.28516 14.75C0.929687 14.5859 0.683594 14.2305 0.683594 13.793L0.683594 1.73438C0.683594 1.29688 0.929688 0.941406 1.28516 0.75ZM12.9062 6.92969C13.4258 7.3125 13.4258 8.21484 12.9336 8.59766L11.293 9.52734L9.48828 7.75L11.293 6L12.9062 6.92969ZM2.84375 14.3945L8.88672 8.35156L10.5273 9.99219L2.84375 14.3945Z" fill="white" />
+                      </svg> </span
+                  ></a>
+                </li>
+                <li>
+                  <a class="footer-store flex items-center justify-center gap-[10px] border-[2px] border-white/10 rounded-[6px] font-Work-Sans font-semibold text-white hover:bg-Bright-Orange transition-all ease-linear duration-300 hover:border-Bright-Orange" href="#"
+                    >Apple Store
+                    <span>
+                      <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.69531 7.10547C8.69531 7.16016 8.61328 8.77344 10.3906 9.62109C10.0625 10.6328 8.91406 12.875 7.57422 12.875C6.80859 12.875 6.37109 12.3828 5.49609 12.3828C4.59375 12.3828 4.10156 12.875 3.41797 12.875C2.10547 12.9297 0.847656 10.4688 0.492187 9.45703C0.21875 8.69141 0.109375 7.95312 0.109375 7.24219C0.109375 4.80859 1.72266 3.63281 3.25391 3.60547C3.99219 3.60547 4.92188 4.125 5.33203 4.125C5.71484 4.125 6.78125 3.49609 7.76562 3.57813C8.77734 3.66016 9.54297 4.04297 10.0625 4.78125C9.16016 5.35547 8.69531 6.09375 8.69531 7.10547ZM7.16406 2.62109C6.61719 3.25 5.96094 3.60547 5.25 3.55078C5.19531 2.8125 5.46875 2.12891 5.96094 1.58203C6.39844 1.08984 7.16406 0.679688 7.82031 0.625C7.82031 0.925781 7.90234 1.74609 7.16406 2.62109Z" fill="white" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- tiny footer -->
+        <div class="grid grid-cols-12 gap-4 items-center py-[27px]">
+          <div class="col-span-12 md:col-span-6">
+            <div class="logo max-w-[215px] min-w-[215px] w-full mx-auto lg:ml-0">
+              <img class="h-8 mx-auto lg:ml-0" src="./assets/images/home-2/logo.png" alt="" />
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 text-right">
+            <p class="font-jost font-normal lg:text-[14px] xl:text-[18px] leading-[26px] text-white text-center lg:text-right">
+              &copy;
+              <span id="year"></span>
+              <a href="https://themeforest.net/user/website_stock">website_stock</a>
+              . All Rights Reserved.
+            </p>
+          </div>
+        </div>
+        <!-- tiny footer -->
+      </div>
+    </div>
+    <!-- footer -->
+
+    <!-- progress area start -->
+    <div class="progress-wrap2">
+      <svg class="progress-circle svg-content" width="14" height="22" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          style="transition: stroke-dashoffset 10ms linear 0s"
+          d=" M8.21875 0.402344L14.5781 6.67578C14.793 6.89062 14.793 7.23438 14.5781 7.40625L13.7188
+                    8.26562C13.5469 8.48047 13.2031 8.48047 12.9883 8.26562L7.875 3.19531L2.71875 8.26562C2.50391
+                    8.48047 2.20312 8.48047 1.98828 8.26562L1.12891 7.40625C0.914062 7.23438 0.914062 6.89062 1.12891
+                    6.67578L7.48828 0.402344C7.70312 0.1875 8.00391 0.1875 8.21875 0.402344ZM7.48828 7.27734C7.70312
+                    7.0625 8.00391 7.0625 8.21875 7.27734L14.5781 13.5508C14.793 13.7656 14.793 14.1094 14.5781
+                    14.2812L13.7188 15.1406C13.5469 15.3555 13.2031 15.3555 12.9883 15.1406L7.875 10.0703L2.71875
+                    15.1406C2.50391 15.3555 2.20312 15.3555 1.98828 15.1406L1.12891 14.2812C0.914062 14.1094 0.914062
+                    13.7656 1.12891 13.5508L7.48828 7.27734Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+    <!-- progress area end -->
+
+    <!-- pre loader start -->
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <!-- pre loader end -->
+
+    <!-- js -->
+
+    <!-- jquery js -->
+    <script defer src="./assets/js/jquery.min.js"></script>
+
+    <!-- jquery-ui js -->
+    <script defer src="./assets/js/jquery-ui.min.js"></script>
+
+    <!-- flowbite js -->
+    <script defer src="./assets/js/flowbite.min.js"></script>
+
+    <!-- alpine js -->
+    <script defer src="./assets/js/alpine.js"></script>
+
+    <!-- swiper js -->
+    <script defer src="./assets/js/swiper.js"></script>
+
+    <!-- gsap js -->
+    <script defer src="./assets/js/gsap.min.js"></script>
+
+    <!-- split-text js -->
+    <script defer src="./assets/js/split-text.js"></script>
+
+    <!-- split-text js -->
+    <script defer src="./assets/js/scrolltigger.js"></script>
+
+    <!-- ScrollSmoother js -->
+    <script defer src="./assets/js/ScrollSmoother.min.js"></script>
+
+    <!-- split-type js -->
+    <script defer src="./assets/js/split-type.js"></script>
+
+    <!-- waw js -->
+    <script defer src="./assets/js/wow.js"></script>
+
+    <!-- counter-up js -->
+    <script defer src="./assets/js/counter-up.js"></script>
+
+    <!-- metismenu js -->
+    <script defer src="./assets/js/metismenu.js"></script>
+
+    <!-- metismenu js -->
+    <script defer src="./assets/js/magnific-popup.js"></script>
+
+    <!-- metismenu js -->
+    <script defer src="./assets/js/waypoint.js"></script>
+
+    <!-- swiper js -->
+    <script defer src="./assets/js/main.js"></script>
+  </body>
+</html>

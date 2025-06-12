@@ -1,0 +1,819 @@
+/*================================================
+Template name: Restfast - Restaurant - HTML Template
+Version: 1.0.0
+Author: Website_Stock 
+Author url: https://themeforest.net/user/website_stock
+
+[ Table of Contents ]
+
+01: General css Style
+  1.1: Google Fonts
+  1.2: Tailwind CSS Base, Components, and Utilities
+02: Custom Components Layer
+  2.1: Subtitle
+  2.2: Title
+  2.3: Team member name
+  2.4: Team member designation
+  2.5: Best food image
+  2.6: Best food price
+  2.7: Best food title
+  2.8: Best food description
+  2.9: Footer title
+  2.10: Footer description
+  2.11: Footer store button
+  2.12: contact information card
+  2.13: Swiper slides
+  2.14: country dropdown
+  2.15: Sticky header
+  2.16: scroll to top
+  2.17: ui datepicker
+  2.18: ui datepicker
+  2.19: rippling css
+  2.20: svg stroke dash animation
+  2.21: overlay effect
+  2.22: ripple button animation
+03: Sections CSS
+  3.1: Marquee
+  3.2: testimonials
+  3.3: chef details progressbar
+04: Animation CSS
+  4.1: animated-circle
+  4.2: preloader animations
+05: keyframes CSS
+  5.1: mymove
+  5.2: circle
+  5.3: marquee
+  5.4: marquee-2
+  5.5: spin
+  5.6: circle-animation
+  5.7: rotate
+  5.8: rotateReverse
+  5.9: pulse-border
+  5.10: fadeInUp
+
+==================================================*/
+
+/*===========================================================
+01: General CSS
+=============================================================*/
+/* Importing Google Fonts */
+/* This @import rule fetches multiple font families from Google Fonts, 
+   making them available for use throughout the project. */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&family=Satisfy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Yantramanav:wght@100;300;400;500;700;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* Importing Tailwind CSS Base, Components, and Utilities */
+/* These directives import the base styles, component styles, and utility classes from Tailwind CSS. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*===========================================================
+02: Custom Components Layer
+=============================================================*/
+
+/* This section defines custom component styles using Tailwind's @apply directive. */
+@layer components {
+  /* Subtitle style */
+  /* Applies responsive text sizes, line heights, and margin for subtitles */
+  .subtitle {
+    @apply text-[14px] lg:text-[18px] xl:text-[24px] leading-[30px] mb-3 lg:mb-[14px] xl:mb-[19px];
+  }
+
+  /* Title style */
+  /* Applies responsive text sizes, line heights, and margin for titles */
+  .title {
+    @apply text-[18px] lg:text-[40px] xl:text-[55px] lg:leading-[50px] xl:leading-[69px] mb-4 lg:mb-[20px] xl:mb-[33px];
+  }
+
+  /* Team member name style */
+  /* Sets responsive text sizes, line heights, and margin for team member names */
+  .meet-our-master-teams-name {
+    @apply text-[14px] lg:text-[18px] xl:text-[22px] leading-[30px] mb-[10px];
+  }
+
+  /* Team member designation style */
+  /* Sets responsive text sizes and line heights for team member designations */
+  .meet-our-master-teams-designation {
+    @apply lg:text-[14px] xl:text-[16px] leading-[24px];
+  }
+
+  /* Best food image style */
+  /* Adjusts the image size and margin for best food images */
+  .the-best-food-img {
+    @apply -mt-[6rem] mb-10 lg:w-[180px] xl:w-[207px] lg:h-[180px] xl:h-[207px];
+  }
+
+  /* Best food price style */
+  /* Sets responsive sizes and line heights for best food prices */
+  .the-best-food-price {
+    @apply w-[30px] lg:w-[44px] h-[30px] xl:w-[54px] lg:h-[44px] xl:h-[54px] text-[12px] xl:text-base leading-[26px];
+  }
+
+  /* Best food title style */
+  /* Applies responsive text sizes, line heights, and margin for best food titles */
+  .the-best-food-title {
+    @apply lg:text-[16px] xl:text-[20px] leading-[26px] lg:mb-[16px] xl:mb-[21px];
+  }
+
+  /* Best food description style */
+  /* Sets responsive text sizes and line heights for best food descriptions */
+  .the-best-food-desc {
+    @apply lg:text-[12px] xl:text-[15px] leading-[26px];
+  }
+
+  /* Footer title style */
+  /* Applies responsive text sizes, line heights, and margin for footer titles */
+  .footer-title {
+    @apply text-[18px] lg:text-[29px] xl:text-[39px] lg:leading-[50px] xl:leading-[60px] mb-4 lg:mb-[25px] xl:mb-[37px];
+  }
+
+  /* Footer description style */
+  /* Sets responsive text sizes, line heights, and margin for footer descriptions */
+  .footer-desc {
+    @apply text-[12px] lg:text-[14px] xl:text-base leading-[23px] mb-10;
+  }
+
+  /* Footer store button style */
+  /* Applies responsive padding, text sizes, and line heights for footer store buttons */
+  .footer-store {
+    @apply py-[8px] lg:py-[15px] xl:py-[22px] px-[12px] lg:px-[30px] xl:px-[45px] lg:text-[14px] xl:text-[18px] leading-[21px];
+  }
+}
+
+/* Styling for the contact information card */
+.contact-info-card::after {
+  /* Creates a custom shape using the clip-path property */
+  clip-path: polygon(0 0, 100% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Styling for Swiper slides */
+.swiper-slide {
+  /* Applies a smooth transition effect for all properties over 200ms */
+  transition: all 200ms linear;
+}
+
+/* Custom scrollbar styling for the country dropdown */
+
+/* Styling the scrollbar track */
+#country-drop::-webkit-scrollbar-track {
+  /* Adds an inset shadow inside the track */
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  /* Sets the background color of the scrollbar track */
+  background-color: #f5f5f5;
+}
+
+/* Styling the scrollbar itself */
+#country-drop::-webkit-scrollbar {
+  /* Sets the width of the scrollbar */
+  width: 6px;
+  /* Sets the background color of the scrollbar */
+  background-color: #f5f5f5;
+}
+
+/* Styling the scrollbar thumb */
+#country-drop::-webkit-scrollbar-thumb {
+  /* Sets the color of the scrollbar thumb */
+  background-color: #000000;
+}
+
+/* Hide default navigation arrows in Swiper */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  /* Ensures the arrows are not displayed */
+  display: none;
+}
+
+/* Sticky header styling */
+.header.sticky {
+  /* Fixes the header at the top of the viewport */
+  position: fixed;
+  top: 0;
+  /* Sets the background color of the header */
+  background-color: #102b2a;
+  /* Reduces the padding to make the header more compact */
+  padding: 0.5rem 0;
+  /* Adds a smooth animation for the header */
+  animation: mymove 0.4s linear;
+  /* Adds a subtle box shadow effect */
+  box-shadow: 2px 0 70px rgba(223, 64, 1, 0.096);
+}
+
+/* Styling for the circular progress bar (scroll to top) */
+.progress-wrap {
+  /* Fixes the position at the bottom right corner of the viewport */
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  /* Sets the dimensions and shape of the button */
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  z-index: 999;
+  /* Initially hides the button by setting opacity and transforming it off-screen */
+  opacity: 0 !important;
+  transform: translateY(100%);
+}
+
+/* Active state for the progress button */
+.progress-wrap.active-progress {
+  /* Makes the button visible and positions it correctly */
+  opacity: 1 !important;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Icon styling within the progress button */
+.progress-wrap::after {
+  position: absolute;
+  /* Font Awesome icon (up arrow) */
+  content: "\f062";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 46px;
+  color: #df3f01;
+  /* Positions the icon within the button */
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  z-index: 1;
+  /* Adds a smooth transition effect */
+  transition: all linear 200ms;
+  /* Ensures a circular shape */
+  border-radius: 50% !important;
+  /* Overrides with a slight border radius */
+  border-radius: 5px;
+}
+
+/* Hover effect for the progress button */
+.progress-wrap::before {
+  position: absolute;
+  /* Same icon, but hidden initially */
+  content: "\f062";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 46px;
+  text-align: center;
+  opacity: 0;
+  /* Transparent text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+  /* Smooth transition on hover */
+  transition: all linear 200ms;
+}
+
+/* Hover effect to hide the icon */
+.progress-wrap:hover::before {
+  opacity: 0;
+}
+
+/* SVG styling within the progress button */
+.progress-wrap svg {
+  /* Ensures the SVG is circular and has a white background */
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* Path styling within the SVG */
+.progress-wrap svg path {
+  /* Ensures the path has no fill */
+  fill: none;
+}
+
+/* Stroke styling for the progress circle */
+.progress-wrap svg.progress-circle path {
+  /* Sets the stroke color and width */
+  stroke: #df3f01;
+  stroke-width: 14px;
+  /* Smooth transition for the stroke */
+  transition: all linear 200ms;
+}
+
+/* Styling for the second progress bar (horizontal) */
+.progress-wrap2 {
+  /* Positions the bar at the bottom of the viewport */
+  position: absolute;
+  left: 50%;
+  bottom: 5rem;
+  /* Sets the dimensions and layout of the button */
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  z-index: 999;
+  /* Initially hides the button by setting opacity and transforming it off-screen */
+  opacity: 0;
+  transform: translate(-35%, 100%);
+  /* Adds compatibility for various browsers */
+  -webkit-transform: translate(-35%, 100%);
+  -moz-transform: translate(-35%, 100%);
+  -ms-transform: translate(-35%, 100%);
+  -o-transform: translate(-35%, 100%);
+  /* Sets the background color */
+  background-color: #fb9015;
+}
+
+/* Active state for the second progress bar */
+.progress-wrap2.active-progress {
+  /* Makes the button visible and positions it correctly */
+  opacity: 1 !important;
+  visibility: visible;
+  transform: translate(-35%, 0%);
+  /* Adds compatibility for various browsers */
+  -webkit-transform: translate(-35%, 0%);
+  -moz-transform: translate(-35%, 0%);
+  -ms-transform: translate(-35%, 0%);
+  -o-transform: translate(-35%, 0%);
+}
+
+/* ui datepicker */
+
+#ui-datepicker-div {
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  margin-top: 0.25rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  z-index: 50 !important;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.ui-datepicker .ui-datepicker-header {
+  background: #df3f01 !important;
+  color: #fff !important;
+}
+.ui-datepicker-header a.ui-datepicker-prev,
+.ui-datepicker-header a.ui-datepicker-next {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABwSURBVHgBpZBRDcAgDAVbBzgYDpCAhElCChqmZBKQsDno2qxNmo3ABy9paOldSEAiSgAQEfGAQZjLfNzSNHqTB/CuzCVDsUFf+8JJd5Jil12J+/iD3dKkxrUp3Lqwk6qTDK4w+Q2T5rAKgevUCrCaB6wMqVKf5DPCAAAAAElFTkSuQmCC") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.ui-datepicker-header a.ui-datepicker-prev {
+  transform: rotate(90deg) !important;
+  -webkit-transform: rotate(90deg) !important;
+  -moz-transform: rotate(90deg) !important;
+  -ms-transform: rotate(90deg) !important;
+  -o-transform: rotate(90deg) !important;
+}
+.ui-datepicker-header a.ui-datepicker-next {
+  transform: rotate(268deg) !important;
+  -webkit-transform: rotate(268deg) !important;
+  -moz-transform: rotate(268deg) !important;
+  -ms-transform: rotate(268deg) !important;
+  -o-transform: rotate(268deg) !important;
+}
+.ui-datepicker-calendar thead th {
+  padding: 0.25rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #df3f01;
+}
+.ui-datepicker-calendar tbody td {
+  width: 2.5rem;
+  text-align: center;
+  padding: 0;
+}
+.ui-datepicker-calendar tbody td a {
+  display: block;
+  border-radius: 0.25rem;
+  line-height: 2rem;
+  transition: 0.3s all;
+  color: #df3f01 !important;
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-align: center;
+  background: #fff !important;
+  border-color: #df3f01 !important;
+  margin: 1px;
+}
+.ui-datepicker-calendar tbody td a:hover {
+  background-color: #df3f01 !important;
+  color: #fff !important;
+}
+.ui-datepicker-calendar tbody td a.ui-state-active {
+  background-color: #df3f01 !important;
+  color: white !important;
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid #df3f01 !important;
+  background: #df3f01 !important;
+  color: #fff !important;
+}
+.ui-datepicker-header a.ui-corner-all {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  margin: 0rem;
+  border-radius: 0.25rem;
+  transition: 0.3s all;
+}
+.ui-datepicker-header a.ui-corner-all:hover {
+  background-color: #df3f01;
+  color: #fff;
+}
+
+.ui-datepicker-header a > span {
+  display: none;
+}
+.ui-datepicker-title {
+  text-align: center;
+  line-height: 2rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding-bottom: 0;
+}
+.ui-datepicker-week-col {
+  color: #df3f01;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.calender {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAASCAYAAACEnoQPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADMSURBVHgBrZLhDYIwEIWvhgHYgG4gG8gGsoE6AW4iIzACGzCCbmA3sBvUu+RVjib+sPUlj+Y7cj1eKZFSCOHGfrL3Sd2yX+xB13e0Vcu2WLU6ds3uddFgtyu4hj1MSV3k8G6S5kB58iXNVLEvlClpPlCmij5b/6qZPdF6yg+wAzvw/OkIqxrwAj6Bz+AFbGNDpSb3zLK7BbfgI1ia5Hw6+ndmr/Jp1jdtyypzC76DB/DXzHpyUBNF8S43Cce1PPNIeRqNPCUH/ShjjHsDM6etxzQMjv8AAAAASUVORK5CYII=");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+}
+
+.arrows {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABwSURBVHgBpZBRDcAgDAVbBzgYDpCAhElCChqmZBKQsDno2qxNmo3ABy9paOldSEAiSgAQEfGAQZjLfNzSNHqTB/CuzCVDsUFf+8JJd5Jil12J+/iD3dKkxrUp3Lqwk6qTDK4w+Q2T5rAKgevUCrCaB6wMqVKf5DPCAAAAAElFTkSuQmCC") !important;
+  background-position: right 0.75rem center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* customer-feedback */
+.reverse-layout .customer-review {
+  order: 3;
+}
+.reverse-layout .dashed {
+  order: 2;
+}
+
+.reverse-layout .customer-profile {
+  order: 1;
+}
+
+/* marquee */
+.marquee-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+  position: relative;
+}
+
+/* Ensure the images fit nicely within the container */
+
+.marquee-slider .swiper-slide {
+  width: 320px; /* Fixed width */
+  height: 390px; /* Fixed height */
+}
+
+.marquee-slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the slide */
+}
+
+/* rippling css */
+.popup-video:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: pulse-border 1100ms ease-out infinite;
+}
+/* rippling css */
+
+/* svg stroke dash animation */
+.path {
+  animation: dash 30s linear infinite;
+  -webkit-animation: dash 30s linear infinite;
+}
+/* svg stroke dash animation */
+
+/* testimonials */
+.testimonials .swiper-wrapper {
+  padding-bottom: 3rem;
+}
+.testimonials .swiper-pagination {
+  text-align: left;
+}
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #eb662b;
+  opacity: 1;
+}
+.testimonials
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+}
+/* testimonials */
+
+/* chef details progressbar css */
+.progress-bar {
+  margin-bottom: 40px;
+}
+.progress-bar .progress-title-holder {
+  padding-bottom: 7px;
+  position: relative;
+  margin: 5px 0;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .progress-bar .progress-title-holder {
+    font-size: 14px;
+  }
+}
+
+.progress-bar
+  .progress-title-holder
+  .progress-number-wrapper
+  .progress-number-mark {
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.progress-bar .progress-content-outter {
+  height: 3px;
+}
+
+.progress-bar .progress-content-outter .progress-content {
+  height: 3px;
+  background-color: #df3f01;
+  width: 0%; /* Initial value */
+}
+/* chef details progressbar css */
+
+/* overlay effect */
+.overlay-anim {
+  position: relative;
+  visibility: visible;
+  animation-delay: 600ms;
+  animation-name: fadeInUp;
+}
+.overlay-anim:after {
+  background: rgba(255, 255, 255, 0.3);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  opacity: 1;
+  pointer-events: none;
+}
+.overlay-anim:hover:after {
+  height: 100%;
+  opacity: 0;
+  transition: all 400ms linear;
+}
+.zoom-effect img {
+  transition: all 400ms ease;
+}
+.zoom-effect:hover img {
+  transform: scale(1.1);
+}
+/* overlay effect */
+
+/* ripple button animation */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  /* border: 0 none; */
+  border-radius: 4px;
+  outline: 0;
+}
+
+.btn__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  cursor: pointer;
+  border: 0 none;
+  outline: 0;
+}
+
+.btn__ink {
+  position: absolute;
+  display: block;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  -webkit-animation: ripple-effect-reverse 0.35s;
+  animation: ripple-effect-reverse 0.35s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.btn__ink--active {
+  -webkit-animation: ripple-effect 0.4s;
+  animation: ripple-effect 0.4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes ripple-effect {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(2.5);
+  }
+}
+
+@keyframes ripple-effect {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(2.5);
+  }
+}
+@-webkit-keyframes ripple-effect-reverse {
+  0% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes ripple-effect-reverse {
+  0% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+/* ripple button animation */
+
+/* media query */
+@media only screen and (max-width: 600px) {
+  .progress-wrap2 {
+    left: 50%;
+    bottom: 8rem;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/*===========================================================
+04: keyframes CSS
+=============================================================*/
+
+/* 4.1: mymove */
+@keyframes mymove {
+  0% {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+/* 4.2: circle */
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 4.3: marquee */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* 4.5: spin */
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* 4.6: circle-animation */
+@keyframes circle-animation {
+  0% {
+    stroke-dashoffset: 314.16;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+/* 4.7: rotate */
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 4.8: rotateReverse */
+@keyframes rotateReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* 4.9: pulse-border */
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 4.10: fadeInUp */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 500;
+  }
+}
